@@ -1,0 +1,229 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2011 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,letterpaper]{moderncv}
+
+%moderncv themes
+\moderncvtheme[blue]{classic} % optional argument are 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+
+
+\usepackage[utf8]{inputenc} %character encoding
+\usepackage{hyperref}
+\usepackage{natbib}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
+%\setlength{\maketitlenamewidth}{10cm}}       % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+
+% personal data
+\firstname{Jason M.}
+\familyname{Bryer}
+%\title{Senior Research Analyst}
+\address{68 Van Schoick Ave}{Albany, NY 12208}
+\mobile{(518) 542-0375}
+%\phone{(518) 464-8594}
+%\fax{fax (optional)}
+\email{jason@bryer.org}
+\homepage{www.bryer.org}
+%\extrainfo{\href{http://www.github.com/jbryer}{github.com/jbryer}}
+%\photo[64pt][0.4pt]{picture}                  % '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
+
+% to show numerical labels in the bibliography; only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% bibliography with mutiple entries
+\usepackage{multibib}
+\newcites{unpublished,publications,presentations,software}{{Unpublished Papers in Preparation},{Published or Submitted},{Presentations},{Software}}
+
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Professional Interests}
+\cvline{}{Teaching and research within K-12 and higher education. Specific areas of interest include the use of technology (e.g. R and LaTeX) for reproducible research; math anxiety, math affect, and general perceptions of mathematics; issues of social justice and equity in education; and methodological and statistical topics, particularly propensity score analysis and modern graphics.}
+
+\section{Education}
+\cventry{2006-present\\ Expected 2012}{Doctoral Candidate}{University at Albany}{Albany, NY}{}{Educational Psychology \& Methodology}  % arguments 3 to 6 can be left empty
+\cventry{2009}{M.S.}{University at Albany}{Albany, NY}{}{Educational Psychology \& Methodology}
+\cventry{2004-2005}{Coursework Completed}{The College of Saint Rose Graduate School}{Albany, NY}{}{Adolescent Eduction in Mathematics}
+\cventry{1999}{B.A.}{The College of Saint Rose}{Albany, NY}{}{Mathematics major; Computer Information Systems minor}
+
+\section{Dissertation}
+\cvline{Title}{\textit{A National Study Comparing Charter and Traditional Public Schools using Propensity Score Analysis}}
+\cvline{Committee}{Robert M. Pruzek (chair), Bruce Dudek, Kathryn S. Schiller}
+\cvline{Abstract}{\small The use of propensity score analysis (Rosenbaum \& Rubin, 1983) has gained increasing popularity for the estimation of causal effects within observational studies. However, its use in situations where data is multilevel, or clustered, is limited (Arpino \& Mealli, 2008; Thommes \& West, 2011). This study will introduce the multilevelPSA (Bryer, 2011) package for R that provides functions for estimating propensity scores for large datasets using logistic regression and conditional inference trees. Furthermore, a set of graphical functions that extends the framework of visualizing propensity score analysis introduced by Helmreich and Pruzek (2009) to multilevel analysis will be discussed. An application for estimating the effects of charter schools as compared to traditional public schools on reading and mathematics in grades 4 and 8 is provided.}
+
+
+\section{Professional Experiences}
+\cventry{2008-present}{Senior Research Analyst}{Excelsior College, Office of Institutional Research}{Albany, NY}{}{%
+Conduct research and data analysis related to the college's mission. This includes developing, administering, and analyzing surveys; analyzing data from the college's student information system; and consulting with individual schools to develop specific measures.}
+
+\cventry{2008-2010}{Research Assistant}{Head Start University Partnership for Classroom Quality}{Albany, NY}{}{%
+Assist with data collection, entry, maintenance, and analysis to evaluate the effectiveness of behavioral (Positive Behavior Support [PBS]) and literacy interventions using the Response-to-Intervention (RTI) model.
+\newline Principal investigators: Kevin P. Quinn \& Frank R. Vellutino}
+
+\cventry{2008-2011}{Webmaster}{University at Albany, School of Education}{Albany, NY}{}{%
+Develop and maintain all School of Education websites.}
+
+\cventry{2006-2007}{Graduate Assistant}{Teaching Mathematics for Understanding, University at Albany}{Albany, NY}{}{%
+Developed and led planning sessions with K-8 mathematics teachers in urban school districts on social justice topics in the mathematics curriculum. Assisted in other areas of the project including data collection, conference planning, and development of online professional development courses. 
+\newline Principal Investigators: Abbe Herzig \& Vicky Kouba}
+
+\cventry{2006-2008}{Senior Applications Developer}{Excelsior College}{Albany, NY}{}{
+Developed Java applications for distance learning and student management systems.}
+
+\cventry{2004-2006}{Senior Software Engineer}{State University of New York}{Albany, NY}{}{
+Developed web based applications in Java and related technologies as part of a state wide financial and human resource systems.}
+
+\cventry{1999-2004}{Software Engineer}{MapInfo}{Troy, NY}{}{
+Contributed key features as part of a geographic information system (GIS) server application (MapXtreme Java).}
+
+
+\section{Teaching Experiences}
+\cvline{Fall 2011}{Introduction to R and LaTeX for Institutional Research (Workshop given at the Northeast Association for Institutional Research)\newline \small This workshop will provide an overview as well as hands-on exercises for using R and LaTeX to perform data analysis and report generation. Participants will learn to perform basic statistical analyses in R and to generate reports with LaTeX in spreadsheet, presentation, and document formats.}
+\cvline{Fall 2010}{Introduction to R and LaTeX (Excelsior College In-service workshop)}
+\cvline{Fall 2008\\Spring 2009}{EPSY 420 Child \& Adolescent Development\newline \small This course covers theory and research in social, emotional, physical, and intellectual development and its application to instruction with an emphasis on late childhood through middle adolescence.}
+\cvline{2007-2011\\Fall Semesters}{Assisted in teaching the online section of Statistics I (EPSY 530) including the installation and management of the Moodle Content Management System ({\href{http://moodle.bryer.org}{moodle.bryer.org}})}
+
+\section{Service Positions}
+\subsection{City School District of Albany}
+\cvline{2011-2012}{\small Committee Member, Grade Configuration Committee; Chair of the Accountability Subcommittee}
+\subsection{American Educational Research Association}
+\cvline{2009-2011}{Treasurer, Studying and Self-Regulated Learning Special Interest Group}
+\cvline{2009-2010}{Committee Member, Division D Membership Committee}
+\subsection{Excelsior College}
+\cvline{2010-present}{Committee Member, Remediation}
+\cvline{2010-present}{Committee Member, Data Definitions \& Quality}
+\cvline{2010-present}{Committee Member, Information Technology Operations \& Security Committee}
+\cvline{2011-2012}{Committee Member, Search Committee for Assistant Provost}
+\cvline{2009-2010}{Committee Member, Early Alert System for Identifying Non-Persistent Students}
+\cvline{2009}{Committee Chair, Task Force on a Library of Model Courses}
+\cvline{2009-2010}{Committee Member, System for Storing Information at Excelsior College}
+\subsection{University at Albany, Division of Educational Psychology \& Methodology}
+\cvline{2007-2008}{Treasurer, Graduate Student Organization}
+
+\renewcommand{\listitemsymbol}{}            % change the symbol for lists
+
+\section{Professional Memberships}
+\cvline{AERA}{\href{http://aera.net}{American Educational Research Association}}
+\cvline{AIR}{\href{http://www.airweb.org/}{Association for Institutional Research}}
+\cvline{ASA}{\href{http://www.amstat.org/}{American Statistical Association}}
+\cvline{MAA}{\href{http://www.maa.org/}{Mathematical Association of America}}
+\cvline{NCTM}{\href{http://www.nctm.org/}{National Council of Teachers of Mathematics}}
+\cvline{NEAIR}{\href{http://www.neair.org}{North East Association for Institutional Research}}
+\cvline{STP}{\href{http://teachpsych.org/}{Society for the Teaching of Psychology}}
+
+\section{Awards \& Grants}
+\cvline{2011}{The Society of Multivariate Experimental Psychology (SMEP), Workshop Travel Award (two separate awards of \$1,000 each)}
+\cvline{2011}{National Center for Educational Statistics Workshop Travel Award (\symbol{126}\$800)}
+\cvline{2009}{Association for Institutional Research (AIR) \& National Center for Educational Statistics (NCES), Travel Grant (\$330)}
+\cvline{2009}{National Science Foundation, Travel/Research Grant (\$1,000)}
+\cvline{2009}{University at Albany Graduate Student Organization, Travel/Research Grant (\$320.00)}
+\cvline{2001}{Award for Outstanding Performance, MapInfo.}
+\cvline{1999}{Sister Noel Marie Cronin Award for excellence in Mathematics, College of Saint Rose.}
+\cvline{1999}{Outstanding Senior Award for Mathematics/Computer Information Systems, College of Saint Rose.}
+\cvline{1998, 1999}{Service and Appreciation Award, College of Saint Rose.}
+
+% Publications from a BibTeX file without multibib
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{}}% for BibTeX numerical labels
+%\bibliographystyle{plain}
+%\bibliography{publications}                  % 'publications' is the name of a BibTeX file
+%\nocite{*}
+
+% Publications from a BibTeX file using the multibib package
+%Unpublished papers in preparation
+\nociteunpublished{naepchapter,multilevelPSAJSS}
+\bibliographystyleunpublished{apa-custom}
+\bibliographyunpublished{BryerReferences}
+%Published or submitted
+\nocitepublications{makeRArticle,nursingMeasurement,mbr2011,factbook}
+\bibliographystylepublications{apa-custom}
+\bibliographypublications{BryerReferences}
+%Presentations
+\nocitepresentations{aera2012,neair2011,smep2011a,smep2011b,user2011,air2011,strose2011,edpsychposter2011,edpsych2011,excelsior2011,neair2010,ies2010,air2010,edpsychposter2010,neair2009,nera2009a,nera2009b,dsc2009,edpsychposter2009,aera2009,nera2008,ualbany2008,edpsych2007,edpsychposter2007,hrumc1998,hrumc1997}
+\bibliographystylepresentations{apa-custom}
+\bibliographypresentations{BryerReferences}
+%Software
+\nocitesoftware{makeR,multilevelPSA,irutils,ruca,ipeds,qualtrics,irutils,FractalJ}
+\bibliographystylesoftware{apa-custom}
+\bibliographysoftware{BryerReferences}
+
+
+
+\section{Professional Development Coursework}
+\cvline{2011}{R Development Master Class, Hadley Wickham}
+\cvline{2011}{Fitting and Evaluating Mixed Models using \texttt{lme4}, Douglas Bates}
+\cvline{2011}{National Assessment of Educational Progress (NAEP) Database training,	National Center for Educational Statistics}
+\cvline{2011}{Presenting Data and Information,	Edward Tufte}
+\cvline{2010}{Handling missing data in R with MICE, Karin Groothuis-Oudshoorn and Stef van Buuren, useR!}
+\cvline{2010}{Elastic-R, a google docs-like portal for data analysis in the cloud, Karim Chine, useR!}
+\cvline{2009}{Using IPEDS Data for Institutional Effectiveness, Mary Ann Coughlin, NEAIR Workshop}
+\cvline{2009}{Accessing and Analyzing National Databases in Secondary and Higher Education, Terrell L. Strayhorn, AERA Extended Course}
+\cvline{2009}{An Introduction to Hierarchical Linear Modeling with R, J. Kyle Roberts, AERA Mini-Course}
+\cvline{2008}{An Introduction to Propensity Score Analysis, Robert M. Pruzek, University at Albany}
+\cvline{2008}{An Introduction to GIS for Educational Researchers, Mark Hogrebe, Courtney A. Bell, \& Charisse A. Gulosino, AERA Mini-Course}
+\cvline{2008}{Foregrounding Issues of Equity and Diversity in Mathematics Education Research: Implications for Research Methods and Teacher Development, Ban Battey, et al., AERA Mini-Course}
+\cvline{2008}{A ``Gentle" Introduction to Statistical Analysis and Teaching with R, Brandon K. Vaughn, AERA Mini-Course}
+
+
+\section{Graduate Coursework}
+\cvline{EPSY 522}{Adolescent Development}
+\cvline{EPSY 530}{Statistical Methods I}
+\cvline{EPSY 540}{Assessment in Education}
+\cvline{EPSY 610}{Advanced Educational Psychology: Learning \& Instruction}
+\cvline{EPSY 623}{Advanced Developmental Psychology}
+\cvline{EPSY 630}{Statistical Methods II}
+\cvline{EPSY 640}{Educational \& Psychological Measurement}
+\cvline{EPSY 687}{Institute in Education: Item Response Theory}
+\cvline{EPSY 713}{Self-Regulated Learning}
+\cvline{EPSY 721}{Comparative Theories in Human Development}
+\cvline{EPSY 725}{Seminar in Human Development: Language Development}
+\cvline{ECPY 725}{Multivariate Applications in Counseling Psychology}
+\cvline{ECPY 726}{Analysis of Covariance Structures}
+\cvline{EPSY 735}{Seminar in Statistics (PSA, bootstrapping, factor analysis)}
+\cvline{EPSY 761}{History \& Issues in Special Education}
+\cvline{EAPS 762}{Seminar in Advanced Research Methods for Educational Leadership (HLM)}
+\cvline{EPSY 780}{Seminar in the Profession of Educational Psychology}
+\cvline{ETAP 850}{Equity, Diversity, \& Social Justice in Mathematics \& Science Education}
+\cvline{EPSY 887}{Institute in Education: The Use of R in Educational Psychology}
+\cvline{EPSY 887}{Institute in Education: Modern Graphics for Social Science Research}
+\cvline{EDU 506}{Educational Foundations}
+\cvline{EDU 530}{Middle School Education: Theory \& Practice}
+\cvline{EDU 590}{Research Seminar}
+\cvline{EPY 500}{Educational Research}
+\cvline{EPY 502}{Survey of Educational Psychology}
+\cvline{SEC 515}{Curriculum \& Instruction in Secondary Schools}
+\cvline{SEC 518}{Literacy Improvement in Secondary Schools}
+\cvline{SEC 522}{Methods of Teaching Math in Secondary Schools}
+
+\clearpage
+\section{References}
+\subsection{Robert Pruzek, Ph.D.}
+\cvline{}{Professor, Division of Educational Psychology \& Methodology}
+\cvline{Email}{\href{mailto:rmpruzek@albany.edu}{rmpruzek@albany.edu}}
+\cvline{Phone}{(518) 793-4395}
+\cvline{Address}{ED 225, School of Education\newline University at Albany\newline 1400 Western Ave\newline Albany, NY 12222}
+
+\subsection{Heidi Andrade, Ed.D.}
+\cvline{}{Associate Professor, Division of Educational Psychology \& Methodology}
+\cvline{Email}{\href{mailto:HAndrade@albany.edu}{HAndrade@albany.edu}}\cvline{Phone}{(518) 437-4422}\cvline{Address}{ED 210, School of Education\newline University at Albany\newline 1400 Western Ave\newline Albany, NY 12222}
+
+\subsection{Joan Newman, Ph.D.}\cvline{}{Director \& Associate Professor, Division of Educational Psychology \& Methodology}
+\cvline{Email}{\href{mailto:joanewman@gmail.com}{joanewman@gmail.com}}\cvline{Phone}{(518) 442-4781}\cvline{Address}{ED 236, School of Education\newline University at Albany\newline 1400 Western Ave\newline Albany, NY 12222}
+
+\end{document}
+
+
+%% end of file `template_en.tex'.
