@@ -1,0 +1,7 @@
+pdflatex Bryer.CV.brief.tex
+bibtex publications
+bibtex software
+bibtex presentations
+bibtex unpublished
+pdflatex Bryer.CV.brief.tex
+pdflatex Bryer.CV.brief.tex
