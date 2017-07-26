@@ -1,5 +1,5 @@
 
-title: Jason Bryer
+title: Jason Bryer, Ph.D.
 url: 'http://jason.bryer.org/'
 baseurl: '/CV' #change it according to your repository name
 
@@ -13,15 +13,15 @@ baseurl: '/CV' #change it according to your repository name
 
 
 #Profile information
-name: Jason Bryer
+name: Jason Bryer, Ph.D.
 tagline: 
 pic: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
 #sidebar links
 email: jason@bryer.org
 phone: 518-464-8594
-website: bryer.com #do not add http://
-linkedin: jbryer
+website: bryer.org #do not add http://
+linkedin: jasonbryer
 github: jbryer
 twitter: '@jbryer'
 
