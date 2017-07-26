@@ -70,7 +70,7 @@ p {
   color: #fff;
 }
 .sidebar-wrapper .name {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 900;
   margin-top: 0;
   margin-bottom: 10px;
@@ -155,7 +155,7 @@ p {
 .main-wrapper {
   background: #fff;
   padding: 60px;
-  padding-right: 360px;
+  padding-right: 300px;
 }
 .main-wrapper .section-title {
   text-transform: uppercase;
