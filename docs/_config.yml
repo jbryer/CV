@@ -1,7 +1,7 @@
 
 title: Jason Bryer, Ph.D.
 url: 'http://jason.bryer.org/'
-baseurl: '/CV' #change it according to your repository name
+baseurl: '/' #change it according to your repository name
 
 
 # Enable one of these styles by removing #. Style will be applied only after restarting the build or serve.
@@ -14,7 +14,7 @@ baseurl: '/CV' #change it according to your repository name
 
 #Profile information
 name: Jason Bryer, Ph.D.
-tagline: 
+tagline:
 pic: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
 #sidebar links
