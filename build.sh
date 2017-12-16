@@ -5,3 +5,6 @@ bibtex presentations
 bibtex unpublished
 pdflatex Bryer.CV.tex
 pdflatex Bryer.CV.tex
+rm *.aux
+rm *.bbl
+rm *.blg
