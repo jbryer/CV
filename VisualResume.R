@@ -13,7 +13,7 @@ VisualResume(
 					"Email: jason@bryer.org",
 					"Web: www.bryer.org"),
 	titles.right = c("",
-					 "Full CV: http://cv.bryer.org",
+					 "Full CV: https://cv.bryer.org",
 					 "Github: https://github.com/jbryer"),
 	titles.left.cex = c(3, 2, 2),
 	titles.right.cex = c(3, 2, 2),
