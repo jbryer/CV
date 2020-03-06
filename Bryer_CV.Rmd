@@ -92,14 +92,16 @@ teaching %>% detailed_entries(
 # Service Positions
 
 \cvline{2014-present}{Founding Organizer of the Albany R Users Group\newline Website: \url{http://www.meetup.com/Albany-R-Users-Group}}
-\subsection{Dissertation Committees}
+
+\subsection{\textbf{Dissertation Committees}}
 \cvline{current}{David Franklin - Relationship between grit, mindset, and academic achievement}
 \cvline{2019}{Erica Pawlo - Identifying Profiles of Motivational Processes in Online College Students and Their Relations to Multiple Indicators of Academic Success}
 \cvline{2018}{Kimberly Speershneider - The Differentiated Impact Of Early Entry Into Head Start On Social Competence And Literacy: An Applied Propensity Score Analysis}
 \cvline{2015}{Chrisopher Valle - Effects Of Criteria-Referenced Formative Assessment On Achievement In Music}
 \cvline{2015}{Fei Chen - The Impact of Criteria-Referenced Formative Assessment On Fifth Grade Students' Theater Arts
 And English Language Arts Achievement}
-\subsection{Excelsior College}
+
+\subsection{\textbf{Excelsior College}}
 \cvline{2015-2019}{Chair, Diagnostic Assessment \& Achievement of College Skills Advisory Committee}
 \cvline{2014-2018}{Chair, Technology Advisory Committee}
 \cvline{2014-2018}{Committee Member, Information Technology Council}
@@ -112,13 +114,17 @@ And English Language Arts Achievement}
 \cvline{2009-2010}{Committee Member, Early Alert System for Identifying Non-Persistent Students}
 \cvline{2009}{Chair, Task Force on a Library of Model Courses}
 \cvline{2009-2010}{Committee Member, System for Storing Information at Excelsior College}
-\subsection{City School District of Albany}
+
+\subsection{\textbf{City School District of Albany}}
 \cvline{2011-2012}{\small Committee Member, Grade Configuration Committee; Chair of the Accountability Subcommittee}
-\subsection{American Educational Research Association}
+
+\subsection{\textbf{American Educational Research Association}}
 \cvline{2009-2011}{Treasurer, Studying and Self-Regulated Learning Special Interest Group}
 \cvline{2009-2010}{Committee Member, Division D Membership Committee}
-\subsection{University at Albany, Division of Educational Psychology \& Methodology}
+
+\subsection{\textbf{University at Albany, Division of Educational Psychology \& Methodology}}
 \cvline{2007-2008}{Treasurer, Graduate Student Organization}
+
 
 # Professional Memberships
 
