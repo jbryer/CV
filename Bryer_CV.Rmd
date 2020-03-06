@@ -1,0 +1,272 @@
+---
+name: Jason M. Bryer, Ph.D.
+surname: 
+# position: "Professor"
+# address: "Albany, NY"
+phone: 518-464-8594
+www: www.bryer.org
+email: "jason@bryer.org"
+twitter: jbryer
+github: jbryer
+linkedin: jasonbryer
+# aboutme: 
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 414141 # use black color
+output:
+  vitae::moderncv:
+    theme: classic
+    keep_tex: no
+    keep_md: no
+    pandoc_args: ["--lua-filter=lua/multiple-bibliographies.lua"]
+bibliography_published: "bib/Published.bib"
+bibliography_presentations: "bib/Presentations.bib"
+bibliography_inprep: "bib/Working.bib"
+bibliography_software: "bib/Software.bib"
+csl: "apa7-cv.csl"
+nocite: "@*"
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(readxl)
+library(tibble)
+library(tidyverse)
+
+```
+
+# Professional Interests
+
+Teaching and research within K-12, higher education, and data science. Specific areas of interest include reproducible research; self-regulated learning; formative assessment; issues of social justice and equity in education; and statistics and methodology with an emphasis on propensity score analysis and modern graphics.
+
+# Education
+
+```{r}
+education <- readxl::read_excel('data/Education.xlsx')
+education %>% detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Dissertation
+
+```{r}
+tribble(
+  ~ Description, ~ Label, ~ Other,
+  "A National Study Comparing Charter and Traditional Public Schools Using Propensity Score Analysis", "Title", "",
+  "Robert M. Pruzek (chair), Bruce Dudek (co-chair), Heidi Andrade, Kathryn S. Schiller", "Committee", "",
+  "https://github.com/jbryer/Dissertation", "Website", ""
+) %>% 
+  brief_entries(Description, Label, Other)
+
+```
+
+# Professional Experiences
+
+```{r}
+experiences <- readxl::read_excel('data/Experience.xlsx')
+experiences %>% detailed_entries(
+  what = Title, 
+  when = paste0(Start, ' - ', End), 
+  with = Institution,
+  where = Location,
+  why = Description
+  )
+```
+
+# Teaching Experiences
+
+```{r}
+teaching <- readxl::read_excel('data/Teaching.xlsx')
+teaching %>% detailed_entries(
+  what = Title, 
+  when = Date, 
+  # with = Institution,
+  where = Location,
+  why = Description
+  )
+```
+
+# Service Positions
+
+\cvline{2014-present}{Founding Organizer of the Albany R Users Group\newline Website: \url{http://www.meetup.com/Albany-R-Users-Group}}
+\subsection{Dissertation Committees}
+\cvline{current}{David Franklin - Relationship between grit, mindset, and academic achievement}
+\cvline{2019}{Erica Pawlo - Identifying Profiles of Motivational Processes in Online College Students and Their Relations to Multiple Indicators of Academic Success}
+\cvline{2018}{Kimberly Speershneider - The Differentiated Impact Of Early Entry Into Head Start On Social Competence And Literacy: An Applied Propensity Score Analysis}
+\cvline{2015}{Chrisopher Valle - Effects Of Criteria-Referenced Formative Assessment On Achievement In Music}
+\cvline{2015}{Fei Chen - The Impact of Criteria-Referenced Formative Assessment On Fifth Grade Students' Theater Arts
+And English Language Arts Achievement}
+\subsection{Excelsior College}
+\cvline{2015-2019}{Chair, Diagnostic Assessment \& Achievement of College Skills Advisory Committee}
+\cvline{2014-2018}{Chair, Technology Advisory Committee}
+\cvline{2014-2018}{Committee Member, Information Technology Council}
+\cvline{2017-2018}{Committee Member, Academic Affairs Council}
+\cvline{2013-2014}{Committee Member, Persistence Measure Task Force}
+\cvline{2010-2014}{Committee Member, Student Learning Support Services Committee}
+\cvline{2010-2014}{Committee Member, Data Definitions \& Quality}
+\cvline{2010-2013}{Committee Member, Information Technology Operations \& Security Committee}
+\cvline{2011-2012}{Committee Member, Search Committee for Assistant Provost}
+\cvline{2009-2010}{Committee Member, Early Alert System for Identifying Non-Persistent Students}
+\cvline{2009}{Chair, Task Force on a Library of Model Courses}
+\cvline{2009-2010}{Committee Member, System for Storing Information at Excelsior College}
+\subsection{City School District of Albany}
+\cvline{2011-2012}{\small Committee Member, Grade Configuration Committee; Chair of the Accountability Subcommittee}
+\subsection{American Educational Research Association}
+\cvline{2009-2011}{Treasurer, Studying and Self-Regulated Learning Special Interest Group}
+\cvline{2009-2010}{Committee Member, Division D Membership Committee}
+\subsection{University at Albany, Division of Educational Psychology \& Methodology}
+\cvline{2007-2008}{Treasurer, Graduate Student Organization}
+
+# Professional Memberships
+
+\cvline{AERA}{\href{http://aera.net}{American Educational Research Association}}
+\cvline{ASA}{\href{http://www.amstat.org/}{American Statistical Association}}
+\cvline{NCME}{\href{http://www.ncme.org}{National Council on Measurement in Education}}
+\cvline{NEAIR}{\href{http://www.neair.org}{North East Association for Institutional Research}}
+
+
+# Awards \& Grants
+
+```{r}
+awards <- readxl::read_excel('data/Awards.xlsx')
+awards %>% 
+	mutate(Title = replace_na(Title, '')) %>%
+	brief_entries(
+		paste0(Title, ' ', Description, na.print=''), 
+		Year )
+```
+
+
+
+# Publications
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+::: {#refs_published}
+:::
+
+\endgroup
+
+
+# Working Papers
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+::: {#refs_inprep}
+:::
+
+
+\endgroup
+
+
+# Presentations
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+::: {#refs_presentations}
+:::
+
+\endgroup
+
+
+
+# Software
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+::: {#refs_software}
+:::
+
+\endgroup
+
+
+# Professional Development Coursework
+
+\cvline{2019}{Applied Machine Learning, Max Kuhn, Rstudio::conf workshop.}
+\cvline{2018}{Teach the Tidyverse, Garrett Grolemund, Rstudio::conf workshop.}
+\cvline{2017}{Advanced Shiny, Joe Cheng, Rstudio::conf workshop.}
+\cvline{2015}{Targeted Learning, Sherri Rose, Atlantic Causal Inference Conference short course.}
+\cvline{2014}{Applied Predictive Modeling in R, Max Kuhn, useR! Pre-Conference workshop.}
+\cvline{2013}{Using Spatial Data, Roger Bivand, useR! Pre-Conference workshop.}
+\cvline{2012}{Statistical Modeling in the R Context, Bill Venables, useR! Pre-Conference workshop.}
+\cvline{2012}{Geospatial Data in R and Beyond, Barry Rowlingson, useR! Pre-conference workshop.}
+\cvline{2012}{Building R Web Applications with Rook, Jeffry Horner, useR! Pre-conference workshop.}
+\cvline{2012}{Using the School Attendance Boundary Information System (SABINS), Salvatore Saporito and David Van Riper, AERA Mini-Course.}
+\cvline{2011}{R Development Master Class, Hadley Wickham}
+\cvline{2011}{Fitting and Evaluating Mixed Models using \texttt{lme4}, Douglas Bates.}
+\cvline{2011}{National Assessment of Educational Progress (NAEP) Database training,	National Center for Educational Statistics.}
+\cvline{2011}{Presenting Data and Information,	Edward Tufte.}
+\cvline{2010}{Handling missing data in R with MICE, Karin Groothuis-Oudshoorn and Stef van Buuren, useR!}
+\cvline{2010}{Elastic-R, a google docs-like portal for data analysis in the cloud, Karim Chine, useR!}
+\cvline{2009}{Using IPEDS Data for Institutional Effectiveness, Mary Ann Coughlin, NEAIR Workshop.}
+\cvline{2009}{Accessing and Analyzing National Databases in Secondary and Higher Education, Terrell L. Strayhorn, AERA Extended Course.}
+\cvline{2009}{An Introduction to Hierarchical Linear Modeling with R, J. Kyle Roberts, AERA Mini-Course.}
+\cvline{2008}{An Introduction to Propensity Score Analysis, Robert M. Pruzek, University at Albany.}
+\cvline{2008}{An Introduction to GIS for Educational Researchers, Mark Hogrebe, Courtney A. Bell, \& Charisse A. Gulosino, AERA Mini-Course.}
+\cvline{2008}{Foregrounding Issues of Equity and Diversity in Mathematics Education Research: Implications for Research Methods and Teacher Development, Ban Battey, et al., AERA Mini-Course.}
+\cvline{2008}{A ``Gentle" Introduction to Statistical Analysis and Teaching with R, Brandon K. Vaughn, AERA Mini-Course.}
+
+# Graduate Coursework
+
+\cvline{}{\textbf{Completed at the University at Albany}}
+\cvline{EPSY 522}{Adolescent Development}
+\cvline{EPSY 530}{Statistical Methods I}
+\cvline{EPSY 540}{Assessment in Education}
+\cvline{EPSY 610}{Advanced Educational Psychology: Learning \& Instruction}
+\cvline{EPSY 623}{Advanced Developmental Psychology}
+\cvline{EPSY 630}{Statistical Methods II}
+\cvline{EPSY 640}{Educational \& Psychological Measurement}
+\cvline{EPSY 687}{Institute in Education: Item Response Theory}
+\cvline{EPSY 713}{Self-Regulated Learning}
+\cvline{EPSY 721}{Comparative Theories in Human Development}
+\cvline{EPSY 725}{Seminar in Human Development: Language Development}
+\cvline{ECPY 725}{Multivariate Applications in Counseling Psychology}
+\cvline{ECPY 726}{Analysis of Covariance Structures}
+\cvline{EPSY 735}{Seminar in Statistics (PSA, bootstrapping, factor analysis)}
+\cvline{EPSY 761}{History \& Issues in Special Education}
+\cvline{EAPS 762}{Seminar in Advanced Research Methods for Educational Leadership (HLM)}
+\cvline{EPSY 780}{Seminar in the Profession of Educational Psychology}
+\cvline{ETAP 850}{Equity, Diversity, \& Social Justice in Mathematics \& Science Education}
+\cvline{EPSY 887}{Institute in Education: The Use of R in Educational Psychology}
+\cvline{EPSY 887}{Institute in Education: Modern Graphics for Social Science Research}
+\cvline{}{\textbf{Completed at the College of Saint Rose}}
+\cvline{EDU 506}{Educational Foundations}
+\cvline{EDU 530}{Middle School Education: Theory \& Practice}
+\cvline{EDU 590}{Research Seminar}
+\cvline{EPY 500}{Educational Research}
+\cvline{EPY 502}{Survey of Educational Psychology}
+\cvline{SEC 515}{Curriculum \& Instruction in Secondary Schools}
+\cvline{SEC 518}{Literacy Improvement in Secondary Schools}
+\cvline{SEC 522}{Methods of Teaching Math in Secondary Schools}
+
+\clearpage
+
+# References
+
+\subsection{\textbf{Bruce Dudek, Ph.D.}}
+\cvline{}{Professor, Department of Psychology}
+\cvline{Email}{\href{mailto:bruce.dudek@albany.edu}{bruce.dudek@albany.edu}}
+\cvline{Phone}{(518) 442-4824}
+\cvline{Address}{Social Sciences 327\newline University at Albany\newline 1400 Western Ave\newline Albany, NY 12222}
+
+\subsection{\textbf{Lisa Daniels, Ph.D.}}
+\cvline{}{Assistant Vice President}
+\cvline{Email}{\href{mailto:ldaniels@excelsior.edu}{ldaniels@excelsior.edu}}
+\cvline{Phone}{(518) 608-8398}
+\cvline{Address}{7 Columbia Circle\newline Albany, NY 12203-5159}
+
+\subsection{\textbf{Heidi Andrade, Ed.D.}}
+\cvline{}{Director \& Associate Professor, Division of Educational Psychology \& Methodology}
+\cvline{Email}{\href{mailto:handrade@albany.edu}{handrade@albany.edu}}\cvline{Phone}{(518) 437-4422}\cvline{Address}{ED 210, School of Education\newline University at Albany\newline 1400 Western Ave\newline Albany, NY 12222}
+

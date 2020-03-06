@@ -1,0 +1,361 @@
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.xlsx$"]
+publishDir = "../docs/"
+baseURL = "/"
+languageCode = "en"
+title = ""
+theme = "hugo-devresume-theme"
+googleAnalytics = "UA-XXXXXXX-Y"
+
+
+
+[params]
+    author = "Jason Bryer, Ph.D."
+    description = ""
+
+    primaryColor = "#2E86C1"
+    textPrimaryColor = "#292929"
+
+    [params.profile]
+        enable = true
+        name = "Jason Bryer, Ph.D."
+        tagline = "Academic Researcher and Teacher"
+        avatar = "Headshot_Cartoon.jpg"
+
+    [params.contact]
+        enable = true
+        location = "Albany, New York"
+
+        [[params.contact.list]]
+        icon = "fas fa-phone-square"
+        url = "tel:#"
+        text = "518-464-8594"
+        [[params.contact.list]]
+        icon = "fas fa-envelope-square"
+        url = "mailto:#"
+        text = "jason@bryer.org"
+        [[params.contact.list]]
+        icon = "fas fa-globe"
+        url = "#"
+        text = "www.bryer.org"
+        [[params.contact.list]]
+        icon = "fas fa-file-pdf"
+        url = "https://github.com/jbryer/CV/blob/master/Bryer_CV.pdf?raw=true"
+        text = "Download CV"
+
+    [params.skills]
+        enable = false
+
+        [[params.skills.list]]
+        title = "Teaching and research within K-12 and higher education"
+        [[params.skills.list.items]]
+        details = "JavaScript/Angular/React/Vue"
+        [[params.skills.list.items]]
+        details = "Python/Ruby/PHP"
+        [[params.skills.list.items]]
+        details = "Node.js/ASP.NET"
+        [[params.skills.list.items]]
+        details = "PostgreSQL/MySQL"
+        [[params.skills.list.items]]
+        details = "Object-oriented design"
+        [[params.skills.list.items]]
+        details = "Design and implement database structures"
+        [[params.skills.list.items]]
+        details = "Lead and deliver complex software systems"
+
+        [[params.skills.list]]
+        title = "Professional"
+        [[params.skills.list.items]]
+        details = "Effective communication"
+        [[params.skills.list.items]]
+        details = "Team player"
+        [[params.skills.list.items]]
+        details = "Strong problem solver"
+        [[params.skills.list.items]]
+        details = "Good time management"
+
+    [params.education]
+        enable = true
+
+        [[params.education.list]]
+        degree = "Ph.D. Educational Psychology and Methodology"
+        university = "University at Albany"
+        dates = "2014"
+        [[params.education.list]]
+        degree = "M.S. Educational Psychology and Methodology"
+        university = "University at Albany"
+        dates = "2009"
+        [[params.education.list]]
+        degree = "B.A. Mathematics"
+        university = "The College of Saint Rose"
+        dates = "1999"
+
+    [params.awards]
+        enable = false
+
+        [[params.awards.list]]
+        name = "Principal Investigator FIPSE First in the World grant ($2,999,877, P116F150077), Diagnostic Assessment & Achievement of College Skills: Personalized Feedback & Targeted Student Supports"
+        year = "2015 - 2020"
+        [[params.awards.list]]
+        name = "Co-Principal Investigator Strategic Allocation of Resources (StAR) Award to imple- ment DAACS at the University at Albany ($48,500)"
+        year = "2019"
+        [[params.awards.list]]
+        name = "Principal Investigator Bill & Melinda Gates Foundation grant ($168,572) on the use of adaptive learning technology in introductory Biology and Mathematics courses."
+        year = "2013 - 2015"
+        [[params.awards.list]]
+        name = "Lead Evaluator New York State Higher Education Services Corporation (HESC) grant ($449,438) for the expansion of the Online Writing Lab to NYS Community Colleges."
+        year = "2014 - 2016"
+        [[params.awards.list]]
+        name = "NA North East Association for Institutional Research (NEAIR) Ambassador Grant ($800)"
+        year = "2013"
+        [[params.awards.list]]
+        name = "NA Excelsior College, Employee Recognition Award for Excellence in Innovation"
+        year = "2013"
+        [[params.awards.list]]
+        name = "NA The Society of Multivariate Experimental Psychology (SMEP), Workshop Travel Award (three separate awards of $1,000 each)"
+        year = "2011, 2012"
+        [[params.awards.list]]
+        name = "NA National Center for Educational Statistics Workshop Travel Award (~$800)"
+        year = "2011"
+        [[params.awards.list]]
+        name = "NA Association for Institutional Research (AIR) & National Center for Educational Statistics (NCES), Travel Grant ($330)"
+        year = "2009"
+        [[params.awards.list]]
+        name = "NA National Science Foundation, Travel/Research Grant ($1,000)"
+        year = "2009"
+        [[params.awards.list]]
+        name = "NA University at Albany Graduate Student Organization, Travel/Research Grant ($320.00)"
+        year = "2009"
+        [[params.awards.list]]
+        name = "NA Award for Outstanding Performance, MapInfo."
+        year = "2001"
+        [[params.awards.list]]
+        name = "NA Sister Noel Marie Cronin Award for excellence in Mathematics, College of Saint Rose."
+        year = "1999"
+        [[params.awards.list]]
+        name = "NA Outstanding Senior Award for Mathematics/Computer Information Systems, College of Saint Rose."
+        year = "1999"
+        [[params.awards.list]]
+        name = "NA Service and Appreciation Award, College of Saint Rose."
+        year = "1998, 1999"
+
+    [params.languages]
+        enable = true
+
+        [[params.languages.list]]
+        name = "English"
+        level = "Native"
+        [[params.languages.list]]
+        name = "R"
+        level = "Professional"
+
+
+    [params.interests]
+        enable = true
+
+        [[params.interests.list]]
+        name = "Teaching and research within K-12 and higher education"
+        [[params.interests.list]]
+        name = "Data Science"
+        [[params.interests.list]]
+        name = "Reproducible Research"
+        [[params.interests.list]]
+        name = "Statistics"
+        [[params.interests.list]]
+        name = "Causal Inference"
+        [[params.interests.list]]
+        name = "Propensity Score Analysis"
+        [[params.interests.list]]
+        name = "R"
+        [[params.interests.list]]
+        name = "Data Visualization"
+        [[params.interests.list]]
+        name = "Self-Regulated Learning"
+        [[params.interests.list]]
+        name = "College Readiness"
+
+    [params.summary]
+        enable = true
+        text = "Dr Jason Bryer is currently Executive Director and Principal Investigator of the Diagnostic Assessment and Achievement of College Skills (DAACS) at Excelsior College. He is also a Research Associate at the Yang-Tan Institute at Cornell University and Adjunct Associate Professor at the City University of New York teaching statistics in the Master’s of Data Science program. Dr Bryer earned his doctorate in Educational Psychology and Methodology from the University at Albany in 2014 after working as a Software Engineer for 10 years. Research interests include quasi-experimental designs with propensity score analysis, data systems to support formative assessment, and the use of open source software for conducting reproducible research. When not crunching numbers, Jason and his wife are wedding photographers and proud parents to three boys."
+
+
+    [params.experience]
+        enable = true
+
+        [[params.experience.list]]
+        title = "Research Data Associate"
+        dates = "2019 to present"
+        company = "Cornell University"
+        details = "Associate for the Special Education Technical Assistance Partnership for DATA to support the data needs for specialists and school districts within New York State."
+
+        [[params.experience.list]]
+        title = "Executive Director and Principal Investigator"
+        dates = "2016 to present"
+        company = "Excelsior College"
+        details = "Manage FIPSE First in the World grant to develop a Diagnostic Assessment and Achievement of College Skills (DAACS; $2,999,877). DAACS provides incoming students with realtime, actionable feedback about their strengths and weaknesses in critical college skills including self-regulation, math, reading, and writing. Additionally, DAACS provides critical information for predictive analytics at the college.<br/><br/>Website: https://www.daacs.net"
+
+        [[params.experience.list]]
+        title = "Adjunct Associate Professor"
+        dates = "2015 to presnt"
+        company = "CUNY School of Professional Studies"
+        details = "Courses taught: DATA 606 Statistics & Probability for Data Analytics <br/><br/>Website: http://data606.net/"
+
+        [[params.experience.list]]
+        title = "Consultant / Learnin Analyst"
+        dates = "2015 to 2019"
+        company = "NYS PBIS Technical Assistance Center"
+        details = "Developed a data system to support Behavior Specialists work with schools within New York State on their implementation of Positive Behavior Interventions and Supports (PBIS). The goal of this website is to consolidate disparate data sources along with custom data entry so that Behavior Specialists can make data based decisions. I also provided statistical support for analyzing the data at the state level.<br/><br/>Website: https://pbisny.org"
+
+        [[params.experience.list]]
+        title = "Director of Research & Project Evaluation"
+        dates = "2014 to 2015"
+        company = "Excelsior College"
+        details = "Assisted the College in seeking external grants and provide research support for existing grants. Significant activities included:<br/><br/>* Principal Investigator for a Gates Foundation funded grant ($168,572) on the use of adaptive learning technology in Biology and Mathematics.<br/><br/>* Lead Evaluator for New York State Higher Education Services Corporation (HESC) grant ($449,438) for the expansion of the Online Writing Lab to NYS Community Colleges."
+
+        [[params.experience.list]]
+        title = "Adjunct Instructor"
+        dates = "2009 to 2015"
+        company = "University at Albany"
+        details = "Courses taught: EPSY 420 Child & Adolescent Development (Fall 2008, Spring 2009), EPSY 530 Statistics I (Fall 2013, Summer 2014, Fall 2014, Summer 2015), EPSY 887 Computational Statistics (Spring 2013), EPSY 887 Data Science Institute (Fall 2014), EPSY 887 Intro to R for Academic Researchers (Fall 2019), EPSY 630 Statistics II (Spring 2020)"
+
+        [[params.experience.list]]
+        title = "Senior Research Analyst"
+        dates = "2008 to 2014"
+        company = "Excelsior College"
+        details = "Conducted research and data analysis related to the College’s mission. This includes developing, administering, and analyzing surveys; analyzing data from the college’s student information system; and consulting with individual schools to develop specific measures. I also provided substantial support and training for other Research Analysts within the Office covering topics such as methodology, statistics, and reproducible research."
+
+        [[params.experience.list]]
+        title = "Research Assistant"
+        dates = "2008 to 2010"
+        company = "Head Start University Partnership for Classroom Quality"
+        details = "Assisted with data collection, entry, maintenance, and analysis to evaluate the effectiveness of behavioral (Positive Behavior Support [PBS]) and literacy interventions using the Response-to- Intervention (RTI) model.<br/><br/>Principal investigators: Kevin P. Quinn & Frank R. Vellutino"
+
+        [[params.experience.list]]
+        title = "Webmaster"
+        dates = "2008 to 2011"
+        company = "University at Albany, School of Education"
+        details = "Developed and maintained all School of Education websites."
+
+        [[params.experience.list]]
+        title = "Graduate Assistant"
+        dates = "2006 to 2007"
+        company = "Teaching Mathematics for Understanding, University at Albany"
+        details = "Developed and led planning sessions with K-8 mathematics teachers in urban school districts on social justice topics in the mathematics curriculum. Assisted in other areas of the project including data collection, conference planning, and development of online professional development courses.<br/><br/>Principal Investigators: Abbe Herzig & Vicky Kouba"
+
+        [[params.experience.list]]
+        title = "Senior Applications Developer"
+        dates = "2006 to 2008"
+        company = "Excelsior College"
+        details = "Developed Java applications for distance learning and student management systems."
+
+        [[params.experience.list]]
+        title = "Senior Software Engineer"
+        dates = "2004 to 2006"
+        company = "State University of New York"
+        details = "Developed web based applications in Java and related technologies as part of a state wide financial and human resource systems."
+
+        [[params.experience.list]]
+        title = "Software Engineer"
+        dates = "1999 to 2004"
+        company = "MapInfo"
+        details = "Contributed key features as part of a geographic information system (GIS) server application<br/><br/>(MapXtreme Java) including API for reading and writing binary GIS data, framework for web based applications, and data binding."
+
+        [[params.experience.list]]
+        title = "Web Developer"
+        dates = "1997 to 1999"
+        company = "Office of the Attorney General"
+        details = "Software developer and website designer for the New York State Attorney General’s Website."
+
+
+    [params.projects]
+        enable = true
+
+       [[params.projects.list]]
+        title = "DATA606"
+        link = "https://github.com/jbryer/DATA606"
+        meta = "Teaching"
+        tagline = "An R package to support DATA 606 course taught in the M.S. in Data Science program at CUNY."
+
+       [[params.projects.list]]
+        title = "DataCache"
+        link = "https://github.com/jbryer/DataCache"
+        meta = "R Package"
+        tagline = "An R package to manage data caching."
+
+       [[params.projects.list]]
+        title = "likert"
+        link = "https://github.com/jbryer/likert"
+        meta = "R Package"
+        tagline = "An R package to analyze and visualize Likert based items."
+
+       [[params.projects.list]]
+        title = "multilevelPSA"
+        link = "https://github.com/jbryer/multilevelPSA"
+        meta = "R Package"
+        tagline = "An R package for estimating and visualizing multilevel propensity score models."
+
+       [[params.projects.list]]
+        title = "naep"
+        link = "https://github.com/jbryer/naep"
+        meta = "R Package"
+        tagline = "An R package to interface with the National Assessment of Educational Progress (NAEP) restricted use databases. This includes access any analyzing data using the replicate weights and multiple plausible values."
+
+       [[params.projects.list]]
+        title = "PSAboot"
+        link = "https://github.com/jbryer/PSAboot"
+        meta = "R Package"
+        tagline = "Bootstrapping for Propensity Score Analysis."
+
+       [[params.projects.list]]
+        title = "sqlutils"
+        link = "https://github.com/jbryer/sqlutils"
+        meta = "R Package"
+        tagline = "An R package to manage a library of SQL queries."
+
+       [[params.projects.list]]
+        title = "timeline"
+        link = "https://github.com/jbryer/timeline"
+        meta = "R Package"
+        tagline = "An R package to create timeline figures."
+
+       [[params.projects.list]]
+        title = "TriMatch"
+        link = "https://github.com/jbryer/TriMatch"
+        meta = "R Package"
+        tagline = "Propensity score matching for non-binary treatments."
+
+
+    [params.information]
+        enable = true
+
+        [[params.information.list]]
+        title = "Publications"
+        [[params.information.list.items]]
+        details = "(2013) Impact of changes in literacy course content in teacher education programs on preservice teachers' knowledge"
+        [[params.information.list.items]]
+        details = "(2012) Measuring motivation and volition of nursing students in non-traditional learning environments"
+        [[params.information.list.items]]
+        details = "(2011) An international comparison of private and public schools using multilevel propensity score methods and graphics (Abstract)"
+        [[params.information.list.items]]
+        details = "(2010, 2011, 2012, 2013, 2014) Excelsior College Fact Book"
+
+        [[params.information.list]]
+        title = "Interests"
+        details = "Running, Photography, Guitar"
+
+
+    [params.social]
+        enable = true
+
+        [[params.social.list]]
+        icon = "fab fa-github-square"
+        url = "//github.com/jbryer"
+        title = "jbryer"
+        [[params.social.list]]
+        icon = "fab fa-linkedin"
+        url = "//linkedin.com/in/jasonbryer"
+        title = "jasonbryer"
+        [[params.social.list]]
+        icon = "fab fa-twitter-square"
+        url = "//twitter.com/jbryer"
+        title = "@jbryer"
+

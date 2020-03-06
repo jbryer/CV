@@ -1,0 +1,210 @@
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.xlsx$"]
+publishDir = "../docs/"
+baseURL = "/"
+languageCode = "en"
+title = ""
+theme = "hugo-devresume-theme"
+googleAnalytics = "UA-XXXXXXX-Y"
+
+```{r setup, echo=FALSE, results='hide', warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(knitr)
+library(readxl)
+library(bib2df)
+
+experiences <- readxl::read_excel('data/Experience.xlsx')
+education <- readxl::read_excel('data/Education.xlsx')
+awards <- readxl::read_excel('data/Awards.xlsx')
+projects <- readxl::read_excel('data/Projects.xlsx')
+publications <- bib2df::bib2df('bib/Published.bib')
+```
+
+[params]
+    author = "Jason Bryer, Ph.D."
+    description = ""
+
+    primaryColor = "#2E86C1"
+    textPrimaryColor = "#292929"
+
+    [params.profile]
+        enable = true
+        name = "Jason Bryer, Ph.D."
+        tagline = "Academic Researcher and Teacher"
+        avatar = "Headshot_Cartoon.jpg"
+
+    [params.contact]
+        enable = true
+        location = "Albany, New York"
+
+        [[params.contact.list]]
+        icon = "fas fa-phone-square"
+        url = "tel:#"
+        text = "518-464-8594"
+        [[params.contact.list]]
+        icon = "fas fa-envelope-square"
+        url = "mailto:#"
+        text = "jason@bryer.org"
+        [[params.contact.list]]
+        icon = "fas fa-globe"
+        url = "#"
+        text = "www.bryer.org"
+        [[params.contact.list]]
+        icon = "fas fa-file-pdf"
+        url = "https://github.com/jbryer/CV/blob/master/Bryer_CV.pdf?raw=true"
+        text = "Download CV"
+
+    [params.skills]
+        enable = false
+
+        [[params.skills.list]]
+        title = "Teaching and research within K-12 and higher education"
+        [[params.skills.list.items]]
+        details = "JavaScript/Angular/React/Vue"
+        [[params.skills.list.items]]
+        details = "Python/Ruby/PHP"
+        [[params.skills.list.items]]
+        details = "Node.js/ASP.NET"
+        [[params.skills.list.items]]
+        details = "PostgreSQL/MySQL"
+        [[params.skills.list.items]]
+        details = "Object-oriented design"
+        [[params.skills.list.items]]
+        details = "Design and implement database structures"
+        [[params.skills.list.items]]
+        details = "Lead and deliver complex software systems"
+
+        [[params.skills.list]]
+        title = "Professional"
+        [[params.skills.list.items]]
+        details = "Effective communication"
+        [[params.skills.list.items]]
+        details = "Team player"
+        [[params.skills.list.items]]
+        details = "Strong problem solver"
+        [[params.skills.list.items]]
+        details = "Good time management"
+
+    [params.education]
+        enable = true
+
+```{r education, results = 'asis'}
+for(i in 1:nrow(education)) {
+    cat("        [[params.education.list]]\n", sep = '')
+    cat("        degree = \"", education[i,]$Degree, "\"\n", sep = '')
+    cat("        university = \"", education[i,]$Institution, "\"\n", sep = '')
+    cat("        dates = \"", education[i,]$Year, "\"\n", sep = '')
+}
+```
+
+    [params.awards]
+        enable = false
+
+```{r awards, results = 'asis'}
+for(i in 1:nrow(awards)) {
+	cat("        [[params.awards.list]]\n", sep = '')
+	cat("        name = \"", awards[i,]$Title, ' ', awards[i,]$Description, "\"\n", sep = '')
+	cat("        year = \"", awards[i,]$Year, "\"\n", sep = '')
+}
+```
+
+    [params.languages]
+        enable = true
+
+        [[params.languages.list]]
+        name = "English"
+        level = "Native"
+        [[params.languages.list]]
+        name = "R"
+        level = "Professional"
+
+
+    [params.interests]
+        enable = true
+
+        [[params.interests.list]]
+        name = "Teaching and research within K-12 and higher education"
+        [[params.interests.list]]
+        name = "Data Science"
+        [[params.interests.list]]
+        name = "Reproducible Research"
+        [[params.interests.list]]
+        name = "Statistics"
+        [[params.interests.list]]
+        name = "Causal Inference"
+        [[params.interests.list]]
+        name = "Propensity Score Analysis"
+        [[params.interests.list]]
+        name = "R"
+        [[params.interests.list]]
+        name = "Data Visualization"
+        [[params.interests.list]]
+        name = "Self-Regulated Learning"
+        [[params.interests.list]]
+        name = "College Readiness"
+
+    [params.summary]
+        enable = true
+        text = "Dr Jason Bryer is currently Executive Director and Principal Investigator of the Diagnostic Assessment and Achievement of College Skills (DAACS) at Excelsior College. He is also a Research Associate at the Yang-Tan Institute at Cornell University and Adjunct Associate Professor at the City University of New York teaching statistics in the Master’s of Data Science program. Dr Bryer earned his doctorate in Educational Psychology and Methodology from the University at Albany in 2014 after working as a Software Engineer for 10 years. Research interests include quasi-experimental designs with propensity score analysis, data systems to support formative assessment, and the use of open source software for conducting reproducible research. When not crunching numbers, Jason and his wife are wedding photographers and proud parents to three boys."
+
+
+    [params.experience]
+        enable = true
+
+```{r experiences, results='asis'}
+for(i in seq_len(nrow(experiences))) {
+	cat('        [[params.experience.list]]\n', sep = '')
+	cat('        title = "', experiences[i,]$Title, '"\n', sep = '')
+	cat('        dates = "', experiences[i,]$Start, ' to ', experiences[i,]$End, '"\n', sep = '')
+	cat('        company = "', experiences[i,]$Institution, '"\n', sep = '')
+	cat('        details = "',gsub('[\n\r]', '<br/>', experiences[i,]$Description), '"\n\n', sep = '')
+}
+```
+
+
+    [params.projects]
+        enable = true
+
+```{r projects, results='asis'}
+for(i in seq_len(nrow(projects))) {
+	cat('       [[params.projects.list]]\n', sep = '')
+	cat('        title = "', projects[i,]$Title, '"\n', sep = '')
+	cat('        link = "', projects[i,]$URL, '"\n', sep = '')
+	cat('        meta = "', projects[i,]$Meta, '"\n', sep = '')
+	cat('        tagline = "', projects[i,]$Description, '"\n\n', sep = '')
+}
+```
+
+
+    [params.information]
+        enable = true
+
+        [[params.information.list]]
+        title = "Publications"
+```{r publications, results='asis'}
+for(i in seq_len(nrow(publications))) {
+	cat('        [[params.information.list.items]]\n', sep = '')
+	cat('        details = "(', publications[i,]$YEAR, ') ', publications[i,]$TITLE, '"\n', sep = '')
+}
+```
+
+        [[params.information.list]]
+        title = "Interests"
+        details = "Running, Photography, Guitar"
+
+
+    [params.social]
+        enable = true
+
+        [[params.social.list]]
+        icon = "fab fa-github-square"
+        url = "//github.com/jbryer"
+        title = "jbryer"
+        [[params.social.list]]
+        icon = "fab fa-linkedin"
+        url = "//linkedin.com/in/jasonbryer"
+        title = "jasonbryer"
+        [[params.social.list]]
+        icon = "fab fa-twitter-square"
+        url = "//twitter.com/jbryer"
+        title = "@jbryer"
+
