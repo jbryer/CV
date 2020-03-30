@@ -1,16 +1,17 @@
-##### Setup
-install.packages(c('vitae', 'blogdown'))
+##### Setup ####################################################################
+install.packages(c('vitae', 'blogdown', 'tinytex', 'knitr', 'rmarkdown', 'tidyverse'))
 tinytex::install_tinytex()
 
-# Build the configuration file
-knitr::knit('config.Rmd', output = 'site/config.toml')
+##### Build the PDF version of the CV ##########################################
+rmarkdown::render('Bryer_CV.Rmd')
+unlink(list.files(".", pattern = "*.sty")) # Cleanup files copied from vitae
 
-# Run Hugo (note that the CV cannot be built while Hugo is running!)
-library(blogdown)
-wd <- setwd('site')
-blogdown::serve_site()
-setwd(wd)
-blogdown::stop_server()
+##### Build the Hugo/Blogdown site #############################################
+knitr::knit('config.Rmd', output = 'site/config.toml') # configuration file
 
-# Cleanup
-unlink(list.files(".", pattern = "*.sty"))
+# Run Hugo (note that the PDF cannot be built while Hugo is running!)
+wd <- setwd('site')     # Blogdown will only work from current working directory
+blogdown::build_site()  # Build site without running local server
+blogdown::serve_site()  # Run local hugo server
+setwd(wd)               # Reset the working directory
+blogdown::stop_server() # Stop the hugo server

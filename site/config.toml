@@ -21,6 +21,12 @@ googleAnalytics = "UA-XXXXXXX-Y"
         tagline = "Academic Researcher and Teacher"
         avatar = "Headshot_Cartoon.jpg"
 
+
+    [params.summary]
+        enable = true
+        text = "<p>Jason Bryer is currently splits his time as Principal Investigator of the <a href='https://daacs.net'>Diagnostic Assessment and Achievement of College Skills</a> (DAACS) and as a Research Associate at the Yang-Tan Institute at Cornell University. He is also an Adjunct Associate Professor at the City University of New York, <a href='http://data606.net'>teaching statistics</a> in the Master’s of Data Science program since 2015. Dr. Bryer earned his doctorate in Educational Psychology and Methodology from the University at Albany in 2014 after working as a Software Engineer for 10 years. Research interests include quasi-experimental designs with propensity score analysis, data systems to support formative assessment, and the use of open source software for conducting reproducible research. When not crunching numbers, Jason and his wife are <a href='https://bryerphotography.com'>wedding photographers</a> and proud parents to three boys.</p>"
+
+
     [params.contact]
         enable = true
         location = "Albany, New York"
@@ -96,7 +102,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
         name = "Principal Investigator FIPSE First in the World grant ($2,999,877, P116F150077), Diagnostic Assessment & Achievement of College Skills: Personalized Feedback & Targeted Student Supports"
         year = "2015 - 2020"
         [[params.awards.list]]
-        name = "Co-Principal Investigator Strategic Allocation of Resources (StAR) Award to imple- ment DAACS at the University at Albany ($48,500)"
+        name = "Co-Principal Investigator Strategic Allocation of Resources (StAR) Award to implement DAACS at the University at Albany ($48,500)"
         year = "2019"
         [[params.awards.list]]
         name = "Principal Investigator Bill & Melinda Gates Foundation grant ($168,572) on the use of adaptive learning technology in introductory Biology and Mathematics courses."
@@ -173,10 +179,6 @@ googleAnalytics = "UA-XXXXXXX-Y"
         [[params.interests.list]]
         name = "College Readiness"
 
-    [params.summary]
-        enable = true
-        text = "Dr Jason Bryer is currently Executive Director and Principal Investigator of the Diagnostic Assessment and Achievement of College Skills (DAACS) at Excelsior College. He is also a Research Associate at the Yang-Tan Institute at Cornell University and Adjunct Associate Professor at the City University of New York teaching statistics in the Master’s of Data Science program. Dr Bryer earned his doctorate in Educational Psychology and Methodology from the University at Albany in 2014 after working as a Software Engineer for 10 years. Research interests include quasi-experimental designs with propensity score analysis, data systems to support formative assessment, and the use of open source software for conducting reproducible research. When not crunching numbers, Jason and his wife are wedding photographers and proud parents to three boys."
-
 
     [params.experience]
         enable = true
@@ -200,7 +202,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
         details = "Courses taught: DATA 606 Statistics & Probability for Data Analytics <br/><br/>Website: http://data606.net/"
 
         [[params.experience.list]]
-        title = "Consultant / Learnin Analyst"
+        title = "Consultant / Learning Analyst"
         dates = "2015 to 2019"
         company = "NYS PBIS Technical Assistance Center"
         details = "Developed a data system to support Behavior Specialists work with schools within New York State on their implementation of Positive Behavior Interventions and Supports (PBIS). The goal of this website is to consolidate disparate data sources along with custom data entry so that Behavior Specialists can make data based decisions. I also provided statistical support for analyzing the data at the state level.<br/><br/>Website: https://pbisny.org"
@@ -329,6 +331,8 @@ googleAnalytics = "UA-XXXXXXX-Y"
 
         [[params.information.list]]
         title = "Publications"
+        [[params.information.list.items]]
+        details = "(2018) Validity evidence of the internal structure of the {DAACS} self-regulated learning survey"
         [[params.information.list.items]]
         details = "(2013) Impact of changes in literacy course content in teacher education programs on preservice teachers' knowledge"
         [[params.information.list.items]]

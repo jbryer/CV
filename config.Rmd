@@ -17,6 +17,10 @@ education <- readxl::read_excel('data/Education.xlsx')
 awards <- readxl::read_excel('data/Awards.xlsx')
 projects <- readxl::read_excel('data/Projects.xlsx')
 publications <- bib2df::bib2df('bib/Published.bib')
+
+bio <- markdown::markdownToHTML('bio.md', fragment.only = TRUE)
+bio <- gsub('\n', '', bio)
+bio <- gsub('"', "'", bio)
 ```
 
 [params]
@@ -31,6 +35,12 @@ publications <- bib2df::bib2df('bib/Published.bib')
         name = "Jason Bryer, Ph.D."
         tagline = "Academic Researcher and Teacher"
         avatar = "Headshot_Cartoon.jpg"
+
+
+    [params.summary]
+        enable = true
+        text = "`r bio`"
+
 
     [params.contact]
         enable = true
@@ -141,10 +151,6 @@ for(i in 1:nrow(awards)) {
         name = "Self-Regulated Learning"
         [[params.interests.list]]
         name = "College Readiness"
-
-    [params.summary]
-        enable = true
-        text = "Dr Jason Bryer is currently Executive Director and Principal Investigator of the Diagnostic Assessment and Achievement of College Skills (DAACS) at Excelsior College. He is also a Research Associate at the Yang-Tan Institute at Cornell University and Adjunct Associate Professor at the City University of New York teaching statistics in the Master’s of Data Science program. Dr Bryer earned his doctorate in Educational Psychology and Methodology from the University at Albany in 2014 after working as a Software Engineer for 10 years. Research interests include quasi-experimental designs with propensity score analysis, data systems to support formative assessment, and the use of open source software for conducting reproducible research. When not crunching numbers, Jason and his wife are wedding photographers and proud parents to three boys."
 
 
     [params.experience]

@@ -1,9 +1,10 @@
 ### Curriculum Vitae
 
-[Click here to download the latest version of my CV](https://github.com/jbryer/CV/blob/master/Bryer_CV.pdf?raw=true)
+* [Click here for PDF version of my CV](https://github.com/jbryer/CV/blob/master/Bryer_CV.pdf?raw=true)
+* [Click here for WEb version of my CV](http://cv.bryer.org)
 
 
-#### Contact Information
+### Contact Information
 
 Jason M. Bryer, Ph.D.  
 Email: [jason@bryer.org](mailto:jason@bryer.org)  
@@ -12,7 +13,7 @@ CV: [cv.bryer.org](http://cv.bryer.org)
 
 ![Visual Resume](VisualResume/VisualResume.png)
 
-#### Details on the repo
+### Details on the repo
 
 The PDF of my CV was built using the [`vitae`](https://github.com/mitchelloharawild/vitae) R package (with modifications contributed from [JooYoung Seo](https://github.com/jooyoungseo/jy_CV)) and the website using the [`blogdown`](https://bookdown.org/yihui/blogdown/) R package. The goal is to share the same data sources between these two different output formats. The repo is organized with the following files and folders:
 
