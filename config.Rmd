@@ -33,7 +33,7 @@ bio <- gsub('"', "'", bio)
     [params.profile]
         enable = true
         name = "Jason Bryer, Ph.D."
-        tagline = "Academic Researcher and Teacher"
+        tagline = "Assistant Professor"
         avatar = "Headshot_Cartoon.jpg"
 
 
@@ -46,10 +46,10 @@ bio <- gsub('"', "'", bio)
         enable = true
         location = "Albany, New York"
 
-        [[params.contact.list]]
-        icon = "fas fa-phone-square"
-        url = "tel:#"
-        text = "518-464-8594"
+#        [[params.contact.list]]
+#        icon = "fas fa-phone-square"
+#        url = "tel:#"
+#        text = "518-464-8594"
         [[params.contact.list]]
         icon = "fas fa-envelope-square"
         url = "mailto:#"
@@ -61,7 +61,7 @@ bio <- gsub('"', "'", bio)
         [[params.contact.list]]
         icon = "fas fa-file-pdf"
         url = "https://github.com/jbryer/CV/blob/master/Bryer_CV.pdf?raw=true"
-        text = "Download CV"
+        text = "Download Full CV"
 
     [params.skills]
         enable = false

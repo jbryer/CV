@@ -1,9 +1,9 @@
 ---
 name: Jason M. Bryer, Ph.D.
 surname: 
-# position: "Professor"
+position: "Assistant Professor"
 # address: "Albany, NY"
-phone: 518-464-8594
+# phone: 518-464-8594
 www: www.bryer.org
 email: "jason@bryer.org"
 twitter: jbryer
@@ -45,14 +45,14 @@ Teaching and research within K-12, higher education, and data science. Specific 
 
 # Education
 
-```{r}
+```{r education}
 education <- readxl::read_excel('data/Education.xlsx')
 education %>% detailed_entries(Degree, Year, Institution, Where)
 ```
 
 # Dissertation
 
-```{r}
+```{r dissertation}
 tribble(
   ~ Description, ~ Label, ~ Other,
   "A National Study Comparing Charter and Traditional Public Schools Using Propensity Score Analysis", "Title", "",
@@ -65,7 +65,7 @@ tribble(
 
 # Professional Experiences
 
-```{r}
+```{r experiences}
 experiences <- readxl::read_excel('data/Experience.xlsx')
 experiences %>% detailed_entries(
   what = Title, 
@@ -78,7 +78,7 @@ experiences %>% detailed_entries(
 
 # Teaching Experiences
 
-```{r}
+```{r teaching}
 teaching <- readxl::read_excel('data/Teaching.xlsx')
 teaching %>% detailed_entries(
   what = Title, 
@@ -95,11 +95,15 @@ teaching %>% detailed_entries(
 
 \subsection{\textbf{Dissertation Committees}}
 \cvline{current}{David Franklin - Relationship between grit, mindset, and academic achievement}
+\cvline{2020}{Jana L. Vanderslice-Barr - Demographic Differences in Post-Secondary Outcomes Following Participation in the Diagnostic Assessment and Achievement of College Skills Intervention}
 \cvline{2019}{Erica Pawlo - Identifying Profiles of Motivational Processes in Online College Students and Their Relations to Multiple Indicators of Academic Success}
 \cvline{2018}{Kimberly Speershneider - The Differentiated Impact Of Early Entry Into Head Start On Social Competence And Literacy: An Applied Propensity Score Analysis}
 \cvline{2015}{Chrisopher Valle - Effects Of Criteria-Referenced Formative Assessment On Achievement In Music}
 \cvline{2015}{Fei Chen - The Impact of Criteria-Referenced Formative Assessment On Fifth Grade Students' Theater Arts
 And English Language Arts Achievement}
+
+\subsection{\textbf{Excelsior College}}
+\cvline{2019-2020}{Committee Member, Course Evaluation Committee}
 
 \subsection{\textbf{Excelsior College}}
 \cvline{2015-2019}{Chair, Diagnostic Assessment \& Achievement of College Skills Advisory Committee}
@@ -136,7 +140,7 @@ And English Language Arts Achievement}
 
 # Awards \& Grants
 
-```{r}
+```{r awards}
 awards <- readxl::read_excel('data/Awards.xlsx')
 awards %>% 
 	mutate(Title = replace_na(Title, '')) %>%
