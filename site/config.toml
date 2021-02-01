@@ -18,23 +18,23 @@ googleAnalytics = "UA-XXXXXXX-Y"
     [params.profile]
         enable = true
         name = "Jason Bryer, Ph.D."
-        tagline = "Academic Researcher and Teacher"
+        tagline = "Assistant Professor"
         avatar = "Headshot_Cartoon.jpg"
 
 
     [params.summary]
         enable = true
-        text = "<p>Jason Bryer is currently splits his time as Principal Investigator of the <a href='https://daacs.net'>Diagnostic Assessment and Achievement of College Skills</a> (DAACS) and as a Research Associate at the Yang-Tan Institute at Cornell University. He is also an Adjunct Associate Professor at the City University of New York, <a href='http://data606.net'>teaching statistics</a> in the Master’s of Data Science program since 2015. Dr. Bryer earned his doctorate in Educational Psychology and Methodology from the University at Albany in 2014 after working as a Software Engineer for 10 years. Research interests include quasi-experimental designs with propensity score analysis, data systems to support formative assessment, and the use of open source software for conducting reproducible research. When not crunching numbers, Jason and his wife are <a href='https://bryerphotography.com'>wedding photographers</a> and proud parents to three boys.</p>"
+        text = "<p>Dr. Jason Bryer is currently an Assistant Professor in <a href='https://sps.cuny.edu/academics/graduate/master-science-data-science-ms'>Data Science and Information Systems</a> at the <a href='https://sps.cuny.edu'>City University of New York</a>. Additionally, Dr. Bryer is a consultant with Cornell University where he has developed a research and data collection platform for New York State’s Office of Special Education (<a href='https://data.osepartnership.org'>https://data.osepartnership.org</a>). Prior to joining CUNY, he was Executive Director at Excelsior College where he has served as Principal Investigator of the FIPSE First in the World grant to develop and research the <a href='https://daacs.net'>Diagnostic Assessment and Achievement of College Skills</a> along with supporting research and evaluation of other grants at the institution. Dr. Bryer’s research interests include quasi experimental designs with an emphasis in propensity score analysis, data systems to support formative assessment, and the use of open source software for conducting reproducible research. He is the author of over a dozen R packages, including three related to conducting propensity score analyses. When not crunching numbers, Jason is a <a href='http://bryerphotography.com/'>wedding photographer</a> and proud dad to three boys.</p>"
 
 
     [params.contact]
         enable = true
         location = "Albany, New York"
 
-        [[params.contact.list]]
-        icon = "fas fa-phone-square"
-        url = "tel:#"
-        text = "518-464-8594"
+#        [[params.contact.list]]
+#        icon = "fas fa-phone-square"
+#        url = "tel:#"
+#        text = "518-464-8594"
         [[params.contact.list]]
         icon = "fas fa-envelope-square"
         url = "mailto:#"
@@ -46,7 +46,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
         [[params.contact.list]]
         icon = "fas fa-file-pdf"
         url = "https://github.com/jbryer/CV/blob/master/Bryer_CV.pdf?raw=true"
-        text = "Download CV"
+        text = "Download Full CV"
 
     [params.skills]
         enable = false
@@ -184,20 +184,26 @@ googleAnalytics = "UA-XXXXXXX-Y"
         enable = true
 
         [[params.experience.list]]
+        title = "Assistant Professor"
+        dates = "2020 to present"
+        company = "CUNY School of Professional Studies"
+        details = "Assistant Professor in the Data Science and Information Systems department with a two-thirds teaching, one-third adminstration split."
+
+        [[params.experience.list]]
         title = "Research Data Associate"
-        dates = "2019 to present"
+        dates = "2019 to 2020"
         company = "Cornell University"
-        details = "Associate for the Special Education Technical Assistance Partnership for DATA to support the data needs for specialists and school districts within New York State."
+        details = "Associate for the Special Education Technical Assistance Partnership for DATA to support the data needs for specialists and school districts within New York State. Primary developer of the data.osepartnership.org data dashboard."
 
         [[params.experience.list]]
         title = "Executive Director and Principal Investigator"
-        dates = "2016 to present"
+        dates = "2016 to 2020"
         company = "Excelsior College"
         details = "Manage FIPSE First in the World grant to develop a Diagnostic Assessment and Achievement of College Skills (DAACS; $2,999,877). DAACS provides incoming students with realtime, actionable feedback about their strengths and weaknesses in critical college skills including self-regulation, math, reading, and writing. Additionally, DAACS provides critical information for predictive analytics at the college.<br/><br/>Website: https://www.daacs.net"
 
         [[params.experience.list]]
         title = "Adjunct Associate Professor"
-        dates = "2015 to presnt"
+        dates = "2015 to 2020"
         company = "CUNY School of Professional Studies"
         details = "Courses taught: DATA 606 Statistics & Probability for Data Analytics <br/><br/>Website: http://data606.net/"
 
@@ -215,7 +221,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
 
         [[params.experience.list]]
         title = "Adjunct Instructor"
-        dates = "2009 to 2015"
+        dates = "2009 to present"
         company = "University at Albany"
         details = "Courses taught: EPSY 420 Child & Adolescent Development (Fall 2008, Spring 2009), EPSY 530 Statistics I (Fall 2013, Summer 2014, Fall 2014, Summer 2015), EPSY 887 Computational Statistics (Spring 2013), EPSY 887 Data Science Institute (Fall 2014), EPSY 887 Intro to R for Academic Researchers (Fall 2019), EPSY 630 Statistics II (Spring 2020)"
 
@@ -331,6 +337,8 @@ googleAnalytics = "UA-XXXXXXX-Y"
 
         [[params.information.list]]
         title = "Publications"
+        [[params.information.list.items]]
+        details = "(2020) The use of predictive modeling for assessing college readiness"
         [[params.information.list.items]]
         details = "(2018) Validity evidence of the internal structure of the {DAACS} self-regulated learning survey"
         [[params.information.list.items]]
