@@ -18,13 +18,13 @@ googleAnalytics = "UA-XXXXXXX-Y"
     [params.profile]
         enable = true
         name = "Jason Bryer, Ph.D."
-        tagline = "Assistant Professor"
+        tagline = "Assistant Professor and Associate Director"
         avatar = "Headshot_Cartoon.jpg"
 
 
     [params.summary]
         enable = true
-        text = "<p>Dr. Jason Bryer is currently an Assistant Professor in <a href='https://sps.cuny.edu/academics/graduate/master-science-data-science-ms'>Data Science and Information Systems</a> at the <a href='https://sps.cuny.edu'>City University of New York</a>. Additionally, Dr. Bryer is a consultant with Cornell University where he has developed a research and data collection platform for New York State’s Office of Special Education (<a href='https://data.osepartnership.org'>https://data.osepartnership.org</a>). Prior to joining CUNY, he was Executive Director at Excelsior College where he has served as Principal Investigator of the FIPSE First in the World grant to develop and research the <a href='https://daacs.net'>Diagnostic Assessment and Achievement of College Skills</a> along with supporting research and evaluation of other grants at the institution. Dr. Bryer’s research interests include quasi experimental designs with an emphasis in propensity score analysis, data systems to support formative assessment, and the use of open source software for conducting reproducible research. He is the author of over a dozen R packages, including three related to conducting propensity score analyses. When not crunching numbers, Jason is a <a href='http://bryerphotography.com/'>wedding photographer</a> and proud dad to three boys.</p>"
+        text = "<p>Dr. Jason Bryer is currently an Assistant Professor and Associate Director in <a href='https://sps.cuny.edu/academics/graduate/master-science-data-science-ms'>Data Science and Information Systems</a> at the <a href='https://sps.cuny.edu'>City University of New York</a>. He is also the Principal Investigator of an IES grant ($3,789,074, <a href='https://ies.ed.gov/funding/grantsearch/details.asp?ID=4549'>R305A210269</a>) examining the efficacy, predictive power, and cost effectiveness o the <a href='https://daacs.net'>Diagnostic Assessment of College Skills</a>. Prior to joining CUNY, he was Executive Director at Excelsior College where he has served as Principal Investigator of the FIPSE First in the World grant to develop and research the <a href='https://daacs.net'>Diagnostic Assessment and Achievement of College Skills</a> along with supporting research and evaluation of other grants at the institution. Dr. Bryer’s research interests include quasi experimental designs with an emphasis in propensity score analysis, data systems to support formative assessment, and the use of open source software for conducting reproducible research. He is the author of over a dozen R packages, including three related to conducting propensity score analyses. When not crunching numbers, Jason is a <a href='http://bryerphotography.com/'>wedding photographer</a> and proud dad to three boys.</p>"
 
 
     [params.contact]
@@ -98,6 +98,12 @@ googleAnalytics = "UA-XXXXXXX-Y"
     [params.awards]
         enable = false
 
+        [[params.awards.list]]
+        name = "Principal Investigator Institute of Education Sciences grant ($3,789,074, [R305A210269](https://ies.ed.gov/funding/grantsearch/details.asp?ID=4549), Examining the Efficacy, Predictive Power, and Cost Effectiveness of the Diagnostic Assessment and Achievement of College Skills"
+        year = "2021-2026"
+        [[params.awards.list]]
+        name = "Co-Principal Investigator CUNY Interdisciplinary Grant ($40,000), Amplifying Potential: Youth Generated Research on COVID-19 and a vision for how to build back better"
+        year = "2020-2021"
         [[params.awards.list]]
         name = "Principal Investigator FIPSE First in the World grant ($2,999,877, P116F150077), Diagnostic Assessment & Achievement of College Skills: Personalized Feedback & Targeted Student Supports"
         year = "2015 - 2020"
@@ -184,7 +190,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
         enable = true
 
         [[params.experience.list]]
-        title = "Assistant Professor"
+        title = "Assistant Professor and Associate Director"
         dates = "2020 to present"
         company = "CUNY School of Professional Studies"
         details = "Assistant Professor in the Data Science and Information Systems department with a two-thirds teaching, one-third adminstration split."
@@ -278,6 +284,12 @@ googleAnalytics = "UA-XXXXXXX-Y"
         enable = true
 
        [[params.projects.list]]
+        title = "VisualMLE"
+        link = "https://github.com/jbryer/VisualMLE"
+        meta = "Teaching"
+        tagline = "An R package to visualize maximum likelihood estimation."
+
+       [[params.projects.list]]
         title = "DATA606"
         link = "https://github.com/jbryer/DATA606"
         meta = "Teaching"
@@ -338,7 +350,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
         [[params.information.list]]
         title = "Publications"
         [[params.information.list.items]]
-        details = "(2020) The use of predictive modeling for assessing college readiness"
+        details = "(2022) The use of predictive modeling for assessing college readiness"
         [[params.information.list.items]]
         details = "(2018) Validity evidence of the internal structure of the {DAACS} self-regulated learning survey"
         [[params.information.list.items]]

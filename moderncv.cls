@@ -1,5 +1,5 @@
 %% start of file `moderncv.cls'.
-%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com), 2020-2021 moderncv maintainers (github.com/moderncv).
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
@@ -10,7 +10,7 @@
 %                identification
 %-------------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{moderncv}[2021/01/21 v2.1.0 modern curriculum vitae and letter document class]
+\ProvidesClass{moderncv}[2015/07/28 v2.0.0 modern curriculum vitae and letter document class]
 
 
 %-------------------------------------------------------------------------------
@@ -95,34 +95,21 @@
     \xetexorluatexfalse
   \fi
 \fi
+% automatic loading of latin modern fonts
+%\ifxetexorluatex
+%  \RequirePackage{fontspec}
+%  \defaultfontfeatures{Ligatures=TeX}
+%  \RequirePackage{unicode-math}
+%  \setmainfont{Latin Modern}
+%  \setsansfont{Latin Modern Sans}
+%  \setmathfont{Latin Modern Math}
+%\else
+  \RequirePackage[T1]{fontenc}
+  \IfFileExists{lmodern.sty}%
+    {\RequirePackage{lmodern}}%
+    {}
+%\fi
 
-% do not use inputenc and do not automatically load lmodern to avoid problems with German
-% charactes, see
-% https://tex.stackexchange.com/questions/496630/lualatex-problems-with-german-characters
-\ifxetexorluatex
-%     \RequirePackage{fontspec}
-%     \defaultfontfeatures{Ligatures=TeX}
-%     \RequirePackage{unicode-math}
-%     \setmainfont{Latin Modern}
-%     \setsansfont{Latin Modern Sans}
-%     \setmathfont{Latin Modern Math}
-%     \ifluatex
-%         \usepackage{luatextra}
-%         \usepackage{lualatex-math} %loads fontspec
-%         \usepackage{shellesc} % fix a bug for lualatex shellescape
-%     \fi
-\else
-    \RequirePackage[utf8]{inputenc}
-%     \RequirePackage[utf8]{inputenx}
-%     %additions for utf8
-%     \input{ix-utf8enc.dfu}
-    \RequirePackage[T1]{fontenc}
-    % loading lmodern can cause issues with certain special characters. avoid.
-%     \IfFileExists{lmodern.sty}%
-%         {\RequirePackage{lmodern}}%
-%         {}
-%     \fi
-\fi
 % hyper links (hyperref is loaded at the end of the preamble to pass options required by loaded packages such as CJK)
 \newcommand*\pdfpagemode{UseNone}% do not show thumbnails or bookmarks on opening (on supporting browsers); set \pdfpagemode to "UseOutlines" to show bookmarks
 \RequirePackage{url}
@@ -142,8 +129,8 @@
     bookmarksdepth= 2,% to show sections and subsections
     pdfauthor     = {\@firstname{}~\@lastname{}},
     pdftitle      = {\@firstname{}~\@lastname{}\notblank{\@title}{ -- \@title}{}},
-    pdfsubject    = {R\'{e}sum\'{e} of \@firstname{}~\@lastname{}},
-    pdfkeywords   = {\@firstname{}~\@lastname{}, curriculum vit\ae{}, r\'{e}sum\'{e}}}}
+    pdfsubject    = {Resum\'{e} of \@firstname{}~\@lastname{}},
+    pdfkeywords   = {\@firstname{}~\@lastname{}, curriculum vit\ae{}, resum\'{e}}}}
 
 % graphics
 \RequirePackage{graphicx}
@@ -204,6 +191,7 @@
 % compatibility package with older versions of moderncv
 \RequirePackageWithOptions{moderncvcompatibility}
 
+%\RequirePackage{l3regex}
 \RequirePackage{expl3}
 
 %-------------------------------------------------------------------------------
@@ -268,32 +256,26 @@
     }
 
 
-% http://latex.org/forum/viewtopic.php?t=12239
-\def\SplitMyMacro#1/#2{#2}
-
-
 % adds a social link to one's personal information (optional)
 % usage: \social[<optional type>][<optional url>]{<account name>}
-% where <optional type> should be either "linkedin", "xing", "twitter", "github", "gitlab", "bitbucket" or "skype"
+% where <optional type> should be either "linkedin", "xing", "twitter", "github", "gitlab" or "skype"
 \collectionnew{socials}
 \NewDocumentCommand{\social}{O{}O{}m}{%
   \ifthenelse{\equal{#2}{}}%
     {%
-      \ifthenelse{\equal{#1}{linkedin}}     {\collectionadd[linkedin]{socials}     {\protect\httpslink[#3]{www.linkedin.com/in/#3}}}               {}%
-      \ifthenelse{\equal{#1}{xing}}         {\collectionadd[xing]{socials}         {\protect\httpslink[#3]{www.xing.com/profile/#3}}}              {}%
-      \ifthenelse{\equal{#1}{twitter}}      {\collectionadd[twitter]{socials}      {\protect\httpslink[#3]{www.twitter.com/#3}}}                   {}%
-      \ifthenelse{\equal{#1}{github}}       {\collectionadd[github]{socials}       {\protect\httpslink[#3]{www.github.com/#3}}}                    {}%
-      \ifthenelse{\equal{#1}{gitlab}}       {\collectionadd[gitlab]{socials}       {\protect\httpslink[#3]{www.gitlab.com/#3}}}                    {}%
-      \ifthenelse{\equal{#1}{stackoverflow}}{\collectionadd[stackoverflow]{socials}{\protect\httpslink[#3]{stackoverflow.com/users/#3}}}           {}%
-      \ifthenelse{\equal{#1}{bitbucket}}    {\collectionadd[bitbucket]{socials}    {\protect\httpslink[#3]{www.bitbucket.org/#3}}}                  {}%
-      \ifthenelse{\equal{#1}{skype}}        {\collectionadd[skype]{socials}        {#3}}                                                           {}%
-      \ifthenelse{\equal{#1}{orcid}}        {\collectionadd[orcid]{socials}        {\protect\httpslink[#3]{orcid.org/#3}}}                         {}%
-      \ifthenelse{\equal{#1}{researchgate}} {\collectionadd[researchgate]{socials} {\protect\httpslink[#3]{www.researchgate.net/profile/#3}}}      {}%
-      \ifthenelse{\equal{#1}{researcherid}} {\collectionadd[researcherid]{socials} {\protect\httpslink[#3]{www.researcherid.com/rid/#3}}}          {}%
-      \ifthenelse{\equal{#1}{telegram}}     {\collectionadd[telegram]{socials}     {\protect\httpslink[#3]{t.me/#3}}}                              {}%
-      \ifthenelse{\equal{#1}{googlescholar}}{\collectionadd[googlescholar]{socials}{\protect\httpslink[#3]{scholar.google.com/citations?user=#3}}} {}%                        {}%
-      }
-    {\collectionadd[#1]{socials}{\protect\httpslink[#3]{#2}}}}
+      \ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\httpslink[#3]{www.linkedin.com/in/#3}}} {}%
+      \ifthenelse{\equal{#1}{xing}}    {\collectionadd[xing]{socials}    {\protect\httpslink[#3]{www.xing.com/profile/#3}}}{}%
+      \ifthenelse{\equal{#1}{twitter}} {\collectionadd[twitter]{socials} {\protect\httpslink[#3]{www.twitter.com/#3}}}     {}%
+      \ifthenelse{\equal{#1}{github}}  {\collectionadd[github]{socials}  {\protect\httpslink[#3]{www.github.com/#3}}}      {}%
+      \ifthenelse{\equal{#1}{gitlab}}  {\collectionadd[gitlab]{socials}  {\protect\httpslink[#3]{www.gitlab.com/#3}}}      {}%
+      \ifthenelse{\equal{#1}{skype}}   {\collectionadd[skype]{socials}   {#3}}                                             {}%
+      \ifthenelse{\equal{#1}{stackoverflow}}  {\collectionadd[stackoverflow]{socials} {\protect\httpslink[\SplitMyMacro#3]{stackoverflow.com/users/#3}}}      {}%
+      \ifthenelse{\equal{#1}{bitbucket}}{\collectionadd[bitbucket]{socials}{\protect\httpslink[#3]{www.bitbucket.org/#3}}}   {}%
+      \ifthenelse{\equal{#1}{orcid}}   {\collectionadd[orcid]{socials}   {\protect\httpslink[#3]{orcid.org/#3}}}   {}%
+      \ifthenelse{\equal{#1}{researchgate}}   {\collectionadd[researchgate]{socials}   {\protect\httpslink[#3]{www.researchgate.net/profile/#3}}}   {}%
+      \ifthenelse{\equal{#1}{researcherid}}   {\collectionadd[researcherid]{socials}   {\protect\httpslink[#3]{www.researcherid.com/rid/#3}}}   {}%
+    }
+    {\collectionadd[#1]{socials}{\protect\httplink[#3]{#2}}}}
 
 % defines additional personal information (optional)
 % usage: \extrainfo{<text>}
@@ -321,26 +303,30 @@
 \renewcommand{\theenumiv}          {\@Alph\c@enumiv}
 
 % other symbols
-\newcommand*{\listitemsymbol}           {\labelitemi~}
-\newcommand*{\addresssymbol}            {}
-\newcommand*{\mobilephonesymbol}        {}
-\newcommand*{\fixedphonesymbol}         {}
-\newcommand*{\faxphonesymbol}           {}
-\newcommand*{\emailsymbol}              {}
-\newcommand*{\homepagesymbol}           {}
-\newcommand*{\linkedinsocialsymbol}     {}
-\newcommand*{\xingsocialsymbol}         {}
-\newcommand*{\twittersocialsymbol}      {}
-\newcommand*{\githubsocialsymbol}       {}
-\newcommand*{\gitlabsocialsymbol}       {}
-\newcommand*{\stackoverflowsocialsymbol}{}
-\newcommand*{\bitbucketsocialsymbol}    {}
-\newcommand*{\skypesocialsymbol}        {}
-\newcommand*{\orcidsocialsymbol}        {}
-\newcommand*{\researchgatesocialsymbol} {}
-\newcommand*{\researchidsocialsymbol}   {}
+\newcommand*{\listitemsymbol}      {\labelitemi~}
+\newcommand*{\addresssymbol}       {}
+\newcommand*{\mobilephonesymbol}   {}
+\newcommand*{\fixedphonesymbol}    {}
+\newcommand*{\faxphonesymbol}      {}
+\newcommand*{\emailsymbol}         {}
+\newcommand*{\homepagesymbol}      {}
+\newcommand*{\linkedinsocialsymbol}{}
+\newcommand*{\xingsocialsymbol}    {}
+\newcommand*{\twittersocialsymbol} {}
+\newcommand*{\githubsocialsymbol}  {}
+\newcommand*{\gitlabsocialsymbol}  {}
+\newcommand*{\skypesocialsymbol}   {}
+\newcommand*{\bitbucketsocialsymbol} {}
+\newcommand*{\stackoverflowsocialsymbol} {}
+\newcommand*{\orcidsocialsymbol}   {}
+\newcommand*{\researchgatesocialsymbol}{}
+\newcommand*{\researcheridsocialsymbol}{}
 \newcommand*{\googlescholarsocialsymbol}{}
-\newcommand*{\telegramsocialsymbol}     {}
+\newcommand*{\telegramsocialsymbol}{}
+\newcommand*{\whatsappsocialsymbol}{}
+\newcommand*{\signalsocialsymbol}{}
+\newcommand*{\matrixsocialsymbol}{}
+\newcommand*{\bornsymbol}{}
 
 % other
 %------
@@ -384,7 +370,7 @@
 % usage: \moderncvcolor{<color scheme name>}
 \newcommand*{\moderncvcolor}[1]{%
   \RequirePackage{moderncvcolor#1}}
-
+  
 % loads an icons set
 % usage: \moderncvicons{<icon set name>}
 \newcommand*{\moderncvicons}[1]{%
@@ -529,30 +515,39 @@
 \newcommand*{\link}[2][]{%
   \ifthenelse{\equal{#1}{}}%
     {\href{#2}{#2}}%
-    {\href{#2}{\detokenize{#1}}}}
+    {\href{#2}{#1}}}
 
 % makes a http hyperlink
 % usage: \httplink[optional text]{link}
 \newcommand*{\httplink}[2][]{%
   \ifthenelse{\equal{#1}{}}%
     {\href{http://#2}{#2}}%
-    {\href{http://#2}{\detokenize{#1}}}}
+    {\href{http://#2}{#1}}}
 
-
-% makes an https hyperlink
+% makes a https hyperlink with escaped underscore in link name
 % usage: \httpslink[optional text]{link}
 \newcommand*{\httpslink}[2][]{%
   \ifthenelse{\equal{#1}{}}%
-    {\href{https://#2}{#2}}%
-    {\href{https://#2}{\detokenize{#1}}}}
+    {\href{https://#2}{\expandafter\escapeunderscore\expandafter{#2}}}
+    {\href{https://#2}{\expandafter\escapeunderscore\expandafter{#1}}}
+}
+
+\ExplSyntaxOn
+\tl_new:N \l_escapeunderscore_tl
+\cs_new:Npn \escapeunderscore #1 {
+    \tl_set:Nn \l_escapeunderscore_tl {#1}
+    \regex_replace_all:nnN {\_} {_} \l_escapeunderscore_tl
+    \tl_use:N \l_escapeunderscore_tl
+}
+\ExplSyntaxOff
 
 % makes an email hyperlink
 % usage: \emaillink[optional text]{link}
 \newcommand*{\emaillink}[2][]{%
   \ifthenelse{\equal{#1}{}}%
     {\href{mailto:#2}{#2}}%
+    {\href{mailto:#2}{#1}}}
 
-    {\href{mailto:#2}{\detokenize{#1}}}}
 % makes a tel hyperlink
 % usage: \tellink[optional text]{link}
 \newcommand*{\tellink}[2][]{%

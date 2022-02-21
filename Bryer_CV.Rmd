@@ -1,9 +1,9 @@
 ---
-name: Jason M. Bryer, Ph.D.
-surname: 
-position: "Assistant Professor"
+name: Jason M.
+surname: Bryer, Ph.D.
+position: "Assistant Professor and Associate Director"
 # address: "Albany, NY"
-# phone: 518-464-8594
+# phone: 
 www: www.bryer.org
 email: "jason@bryer.org"
 twitter: jbryer
@@ -94,7 +94,7 @@ teaching %>% detailed_entries(
 \cvline{2014-present}{Founding Organizer of the Albany R Users Group\newline Website: \url{http://www.meetup.com/Albany-R-Users-Group}}
 
 \subsection{\textbf{Dissertation Committees}}
-\cvline{current}{David Franklin - Relationship between grit, mindset, and academic achievement}
+\cvline{2021}{David Franklin - Relationship between grit, mindset, and academic achievement}
 \cvline{2020}{Jana L. Vanderslice-Barr - Demographic Differences in Post-Secondary Outcomes Following Participation in the Diagnostic Assessment and Achievement of College Skills Intervention}
 \cvline{2019}{Erica Pawlo - Identifying Profiles of Motivational Processes in Online College Students and Their Relations to Multiple Indicators of Academic Success}
 \cvline{2018}{Kimberly Speershneider - The Differentiated Impact Of Early Entry Into Head Start On Social Competence And Literacy: An Applied Propensity Score Analysis}
