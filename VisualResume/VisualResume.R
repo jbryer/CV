@@ -5,10 +5,10 @@ currentYear <- as.numeric(format(Sys.Date(), '%Y'))
 timeline <- read.csv('VisualResume/VisualResume.csv', stringsAsFactors = FALSE)
 timeline[is.na(timeline$end),]$end <- currentYear + 1
 
-png('VisualResume.png', width = 1000, height = 600)
+png('VisualResume/VisualResume.png', width = 1000, height = 600)
 VisualResume(
-	year.range = c(1997, currentYear + 1),
-	year.steps = 1,
+	year.range = c(1997, currentYear + 2),
+	year.steps = 2,
 	titles.left = c("Jason M. Bryer, Ph.D.",
 					"Email: jason@bryer.org",
 					"Web: www.bryer.org"),
@@ -24,12 +24,13 @@ VisualResume(
 							sub = c("Mathematics", "Educational Psychology", "Educational Psychology"),
 							year = c(1999, 2009, 2014)),
 	events.cex = 1.4,
-	events = data.frame(year = c(1999, 2001, 2014.1, 2014.5, 2015.9),
+	events = data.frame(year = c(1999, 2001, 2014.1, 2014.5, 2015.9, 2021.9),
 						title = c("Sister Noel Marie Cronin Award for excellence in Mathematics, The College of St Rose",
 								  "Award for Outstanding Performance, MapInfo",
 								  "Gates Foundation Grant",
 								  "Started Albany R User Group",
-								  "FIPSE FITW $3 million grant.")),
+								  "FIPSE FITW $3 million grant",
+								  "IES $3.8 million grant")),
 	# interests = list("Statistics" = c(rep("R", 10), rep("PSA", 5), rep("Visualization", 3)),
 	# 				 "Education" = c(rep("Teaching", 10), rep("K12", 5), rep("DAACS", 30)),
 	# 				 "Data Science" = c(rep("Experience", 4), rep("Hacking Skills", 2), rep("Math & Stats", 4))

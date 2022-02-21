@@ -1,7 +1,7 @@
 ### Curriculum Vitae
 
 * [Click here for PDF version of my CV](https://github.com/jbryer/CV/blob/master/Bryer_CV.pdf?raw=true)
-* [Click here for WEb version of my CV](http://cv.bryer.org)
+* [Click here for Web version of my CV](http://cv.bryer.org)
 
 
 ### Contact Information
