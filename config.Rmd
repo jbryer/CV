@@ -33,7 +33,7 @@ bio <- gsub('"', "'", bio)
     [params.profile]
         enable = true
         name = "Jason Bryer, Ph.D."
-        tagline = "Assistant Professor"
+        tagline = "Assistant Professor and Associate Director"
         avatar = "Headshot_Cartoon.jpg"
 
 

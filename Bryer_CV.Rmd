@@ -17,11 +17,13 @@ output:
     theme: classic
     keep_tex: no
     keep_md: no
-    pandoc_args: ["--lua-filter=lua/multiple-bibliographies.lua"]
-bibliography_published: "bib/Published.bib"
-bibliography_presentations: "bib/Presentations.bib"
-bibliography_inprep: "bib/Working.bib"
-bibliography_software: "bib/Software.bib"
+    pandoc_args: ["--lua-filter=lua/multibib.lua"]
+    # pandoc_args: ["--lua-filter=lua/multiple-bibliographies.lua"]
+bibliography:
+    published: "bib/Published.bib"
+    presentations: "bib/Presentations.bib"
+    inprep: "bib/Working.bib"
+    software: "bib/Software.bib"
 csl: "apa7-cv.csl"
 nocite: "@*"
 editor_options: 
@@ -91,9 +93,14 @@ teaching %>% detailed_entries(
 
 # Service Positions
 
+\subsection{\textbf{CUNY School of Professional Studies}}
+\cvline{2023}{CUNY SPS Governing Council}
+\cvline{2021-2022}{CUNY SPS Committee to evaluate and revise the student course evaluations survey}
+
 \cvline{2014-present}{Founding Organizer of the Albany R Users Group\newline Website: \url{http://www.meetup.com/Albany-R-Users-Group}}
 
 \subsection{\textbf{Dissertation Committees}}
+\cvline{current}{Oxana Rosca - Do Incoming Adulte Undergraduate Students Differ from Traditional College Age Undergraduate Students in College Readiness?}
 \cvline{2021}{David Franklin - Relationship between grit, mindset, and academic achievement}
 \cvline{2020}{Jana L. Vanderslice-Barr - Demographic Differences in Post-Secondary Outcomes Following Participation in the Diagnostic Assessment and Achievement of College Skills Intervention}
 \cvline{2019}{Erica Pawlo - Identifying Profiles of Motivational Processes in Online College Students and Their Relations to Multiple Indicators of Academic Success}
@@ -136,7 +143,7 @@ And English Language Arts Achievement}
 \cvline{ASA}{\href{http://www.amstat.org/}{American Statistical Association}}
 \cvline{NCME}{\href{http://www.ncme.org}{National Council on Measurement in Education}}
 \cvline{NEAIR}{\href{http://www.neair.org}{North East Association for Institutional Research}}
-
+\cvline{SCI}{\href{https://sci-info.org}{Society for Causal Inference}}
 
 # Awards \& Grants
 
@@ -156,10 +163,9 @@ awards %>%
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
-
-::: {#refs_published}
-:::
-
+```{r}
+vitae::bibliography_entries("bib/Published.bib") #|> dplyr::arrange(desc(issued))
+```
 \endgroup
 
 
@@ -168,25 +174,20 @@ awards %>%
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
-
-::: {#refs_inprep}
-:::
-
-
+```{r}
+vitae::bibliography_entries("bib/Working.bib") #|> dplyr::arrange(desc(issued))
+```
 \endgroup
-
 
 # Presentations
 
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
-
-::: {#refs_presentations}
-:::
-
+```{r}
+vitae::bibliography_entries("bib/Presentations.bib") #|> dplyr::arrange(desc(issued))
+```
 \endgroup
-
 
 
 # Software
@@ -194,15 +195,17 @@ awards %>%
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
-
-::: {#refs_software}
-:::
-
+```{r}
+vitae::bibliography_entries("bib/Software.bib") #|> dplyr::arrange(desc(issued))
+```
 \endgroup
 
 
-# Professional Development Coursework
+# Professional Development Coursework Completed
 
+\cvline{2022}{Designing the Data Science Classroom, Mine Cetinkaya-Rundel and Maria Tackett
+, Rstudio::conf}
+\cvline{2021}{Bayesian Data Analysis and Stan Workshop, Jonah Gabry, Lander Analystics}
 \cvline{2019}{Applied Machine Learning, Max Kuhn, Rstudio::conf workshop.}
 \cvline{2018}{Teach the Tidyverse, Garrett Grolemund, Rstudio::conf workshop.}
 \cvline{2017}{Advanced Shiny, Joe Cheng, Rstudio::conf workshop.}

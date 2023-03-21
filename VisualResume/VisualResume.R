@@ -7,7 +7,7 @@ timeline[is.na(timeline$end),]$end <- currentYear + 1
 
 png('VisualResume/VisualResume.png', width = 1000, height = 600)
 VisualResume(
-	year.range = c(1997, currentYear + 2),
+	year.range = c(1997, currentYear + 1),
 	year.steps = 2,
 	titles.left = c("Jason M. Bryer, Ph.D.",
 					"Email: jason@bryer.org",
