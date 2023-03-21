@@ -7,6 +7,7 @@ rmarkdown::render('Bryer_CV.Rmd')
 unlink(list.files(".", pattern = "*.sty")) # Cleanup files copied from vitae
 
 ##### Build the Hugo/Blogdown site #############################################
+options(blogdown.hugo.version = "0.54.0")
 knitr::knit('config.Rmd', output = 'site/config.toml') # configuration file
 
 # Run Hugo (note that the PDF cannot be built while Hugo is running!)

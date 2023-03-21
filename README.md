@@ -1,15 +1,15 @@
 ### Curriculum Vitae
 
 * [Click here for PDF version of my CV](https://github.com/jbryer/CV/blob/master/Bryer_CV.pdf?raw=true)
-* [Click here for Web version of my CV](http://cv.bryer.org)
+* [Click here for Web version of my CV](https://cv.bryer.org)
 
 
 ### Contact Information
 
 Jason M. Bryer, Ph.D.  
 Email: [jason@bryer.org](mailto:jason@bryer.org)  
-Website: [jason.bryer.org](http://jason.bryer.org)  
-CV: [cv.bryer.org](http://cv.bryer.org)  
+Website: [jason.bryer.org](https://jason.bryer.org)  
+CV: [cv.bryer.org](https://cv.bryer.org)  
 
 ![Visual Resume](VisualResume/VisualResume.png)
 
