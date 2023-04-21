@@ -210,6 +210,10 @@ for(i in seq_len(nrow(publications))) {
         url = "//linkedin.com/in/jasonbryer"
         title = "jasonbryer"
         [[params.social.list]]
+        icon = "fab fa-mastodon"
+        url = "https://vis.social/@jbryer"
+        title = "@jbryer@vis.social"
+        [[params.social.list]]
         icon = "fab fa-twitter-square"
         url = "//twitter.com/jbryer"
         title = "@jbryer"
