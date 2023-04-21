@@ -263,23 +263,4 @@ vitae::bibliography_entries("bib/Software.bib") #|> dplyr::arrange(desc(issued))
 \cvline{SEC 518}{Literacy Improvement in Secondary Schools}
 \cvline{SEC 522}{Methods of Teaching Math in Secondary Schools}
 
-\clearpage
-
-# References
-
-\subsection{\textbf{Bruce Dudek, Ph.D.}}
-\cvline{}{Professor, Department of Psychology}
-\cvline{Email}{\href{mailto:bruce.dudek@albany.edu}{bruce.dudek@albany.edu}}
-\cvline{Phone}{(518) 442-4824}
-\cvline{Address}{Social Sciences 327\newline University at Albany\newline 1400 Western Ave\newline Albany, NY 12222}
-
-\subsection{\textbf{Lisa Daniels, Ph.D.}}
-\cvline{}{Assistant Vice President}
-\cvline{Email}{\href{mailto:ldaniels@excelsior.edu}{ldaniels@excelsior.edu}}
-\cvline{Phone}{(518) 608-8398}
-\cvline{Address}{7 Columbia Circle\newline Albany, NY 12203-5159}
-
-\subsection{\textbf{Heidi Andrade, Ed.D.}}
-\cvline{}{Director \& Associate Professor, Division of Educational Psychology \& Methodology}
-\cvline{Email}{\href{mailto:handrade@albany.edu}{handrade@albany.edu}}\cvline{Phone}{(518) 437-4422}\cvline{Address}{ED 210, School of Education\newline University at Albany\newline 1400 Western Ave\newline Albany, NY 12222}
 
