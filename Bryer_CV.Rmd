@@ -6,7 +6,7 @@ position: "Assistant Professor and Associate Director"
 # phone: 
 www: www.bryer.org
 email: "jason@bryer.org"
-twitter: jbryer
+# twitter: jbryer
 github: jbryer
 linkedin: jasonbryer
 # aboutme: 
